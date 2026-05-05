@@ -1,3 +1,4 @@
+/* Base Styles (Mobile First) */
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
@@ -27,7 +28,6 @@ header img {
     cursor: pointer;
 }
 
-
 nav {
     display: none;
     flex-direction: column;
@@ -39,10 +39,11 @@ nav.open {
 }
 
 nav a {
-    color: white;
+    color: #ffffff;
     text-decoration: none;
     padding: 0.75rem;
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    display: block;
 }
 
 nav a:hover {
