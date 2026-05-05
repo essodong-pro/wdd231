@@ -6,11 +6,12 @@
 
     #menuButton {
         display: none;
-        /* hide hamburger on large screens */
+        /* Hide hamburger */
     }
 
     nav {
-        display: flex !important;
+        display: flex;
+        /* Always visible on desktop */
         flex-direction: row;
         justify-content: center;
         background: #006699;
@@ -24,6 +25,7 @@
     main {
         display: grid;
         grid-template-columns: 2fr 1fr;
+        /* Two-column layout */
         gap: 2rem;
         padding: 2rem;
     }
