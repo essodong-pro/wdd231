@@ -2,17 +2,18 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="description" content="WDD231 Home Page">
-    <meta name="author" content="Your Name">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WDD231 Home</title>
+    <meta name="description" content="Student portfolio site showcasing About Me, courses, and projects for WDD231.">
+    <meta name="author" content="Essodong N'GNAMA">
+    <title>WDD231 - Student Portfolio</title>
 
     <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 
     <!-- CSS -->
-    <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/large.css">
 
@@ -25,40 +26,60 @@
 <body>
     <header>
         <img src="images/logo.svg" alt="Site Logo">
-        <span>Your Name</span>
+        <span>Essodong N'GNAMA</span>
         <button id="menuButton">☰</button>
     </header>
 
     <nav id="navMenu">
         <a href="index.html">Home</a>
-        <a href="chamber/index.html">Chamber</a>
-        <a href="final/index.html">Final</a>
+        <a href="chamber/index.html">Chamber Project</a>
+        <a href="final/index.html">Final Project</a>
+        <a href="contact.html">Contact</a>
     </nav>
 
     <main>
         <h1>Home</h1>
+
+        <!-- About Me Section -->
         <section>
-            <h2>Section One</h2>
-            <p>Content goes here...</p>
+            <h2>About Me</h2>
+            <p>Hello! My name is Essodong N'GNAMA, a student learning web development and programming. I enjoy building
+                responsive websites and exploring new technologies.</p>
+            <img src="images/student-photo.jpg" 
+                    srcset="images/student-photo@2x.jpg 2x, images/student-photo@3x.jpg 3x" 
+                    alt="Student Photo" 
+                     width="200" height="160">
+
         </section>
+
+        <!-- Courses Section -->
         <section>
-            <h2>Section Two</h2>
-            <p>Content goes here...</p>
+            <h2>Web Certificate Courses</h2>
+            <div>
+                <button id="filterAll">All</button>
+                <button id="filterWDD">WDD</button>
+                <button id="filterCSE">CSE</button>
+            </div>
+            <div id="courseList"></div>
+            <p id="totalCredits"></p>
         </section>
+
+        <!-- Goals Section -->
         <section>
-            <h2>Section Three</h2>
-            <p>Content goes here...</p>
+            <h2>Goals</h2>
+            <p>My goal is to complete the Web and Computer Programming certificate and apply my skills to real-world
+                projects.</p>
         </section>
     </main>
 
     <footer>
         <div>
-            <a href="https://github.com/yourgithubusername">GitHub</a>
+            <a href="https://github.com/essodong-pro">GitHub</a>
             <a href="https://linkedin.com/in/yourlinkedin">LinkedIn</a>
-            <a href="#">Other Social</a>
+            <a href="mailto:guillaumengnama@gmail.com">Email</a>
         </div>
         <div>
-            <p>&copy; <span id="currentyear"></span> Essodong N'GNAMA - TOGO</p>
+            <p>&copy; <span id="currentyear"></span> Essodong N'GNAMA - Togo</p>
         </div>
         <div>
             <p id="lastModified"></p>
