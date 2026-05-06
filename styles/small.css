@@ -10,7 +10,7 @@ header {
     justify-content: space-between;
     align-items: center;
     background: #004466;
-    color: white;
+    color: #ffffff;
     padding: 0.5rem 1rem;
 }
 
@@ -22,15 +22,16 @@ header img {
     font-size: 1.5rem;
     background: none;
     border: none;
-    color: white;
+    color: #ffffff;
     cursor: pointer;
 }
 
 nav {
     display: none;
     flex-direction: column;
-    background: #006699;
-    color: #ffffff !important;
+    background: #005580;
+    
+    color: #ffffff;
 }
 
 nav.open {
@@ -48,7 +49,8 @@ nav span {
 }
 
 nav a:hover {
-    background: #005580;
+   
+    background: #00334d;
     color: #ffcc00;
 }
 
@@ -74,7 +76,7 @@ main {
 
 footer {
     background: #004466;
-    color: white;
+    color: #ffffff;
     text-align: center;
     padding: 1rem;
 }
