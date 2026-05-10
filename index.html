@@ -4,85 +4,83 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Student portfolio site showcasing About Me, courses, and projects for WDD231.">
+    <meta name="description" content="Portfolio d'étudiant WDD231 - Essodong N'GNAMA.">
     <meta name="author" content="Essodong N'GNAMA">
-    <title>WDD231 - Student Portfolio</title>
+    <title>WDD231 - Portfolio</title>
 
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 
-    <!-- CSS -->
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/large.css">
 
-    <!-- JavaScript -->
     <script src="scripts/navigation.js" defer></script>
-    <script src="scripts/date.js" defer></script>
     <script src="scripts/course.js" defer></script>
+    <script src="scripts/date.js" defer></script>
 </head>
 
 <body>
     <header>
-        <img src="images/logo.svg" alt="Site Logo">
-        <span>Essodong N'GNAMA</span>
+        <div class="header-container">
+            <img src="images/logo.svg" alt="Logo EN" class="logo">
+            <span>Essodong N'GNAMA</span>
+        </div>
         <button id="menuButton">☰</button>
     </header>
 
     <nav id="navMenu">
-        <a href="index.html">Home</a>
+        <a href="index.html" class="active">Home</a>
         <a href="chamber/index.html">Chamber Project</a>
         <a href="final/index.html">Final Project</a>
-        <a href="contact.html">Contact</a>
     </nav>
 
     <main>
         <h1>Home</h1>
 
-        <!-- About Me Section -->
-        <section>
-            <h2>About Me</h2>
-            <p>Hello! My name is Essodong N'GNAMA, a student learning web development and programming. I enjoy building
-                responsive websites and exploring new technologies.</p>
-            <img src="images/student-photo.jpg" 
-                    alt="Student Photo" 
-                     width="200" height="160">
+        <div class="top-grid">
+            <section class="card">
+                <h2 class="card-header">About Me</h2>
+                <div class="card-content">
+                    <p>Hello! My name is Essodong N'GNAMA, a student learning web development and programming. I enjoy
+                        building responsive websites and exploring new technologies.</p>
+                </div>
+            </section>
 
-        </section>
+            <section class="card">
+                <h2 class="card-header">Student Photo</h2>
+                <div class="card-content photo-box">
+                    <img src="images/student-photo.jpg" alt="Photo de Essodong N'GNAMA">
+                </div>
+            </section>
+        </div>
 
-        <!-- Courses Section -->
-        <section>
-            <h2>Web Certificate Courses</h2>
-            <div>
-                <button id="filterAll">All</button>
-                <button id="filterWDD">WDD</button>
-                <button id="filterCSE">CSE</button>
+        <section class="card certificate-section">
+            <h2 class="card-header">Web Certificate Courses</h2>
+            <div class="card-content">
+                <div class="filters">
+                    <button id="filterAll">All</button>
+                    <button id="filterCSE">CSE</button>
+                    <button id="filterWDD">WDD</button>
+                </div>
+
+                <div id="courseList" class="course-container">
+                </div>
+
+                <p id="totalCredits" class="credits-display"></p>
             </div>
-            <div id="courseList"></div>
-            <p id="totalCredits"></p>
-        </section>
-
-        <!-- Goals Section -->
-        <section>
-            <h2>Goals</h2>
-            <p>My goal is to complete the Web and Computer Programming certificate and apply my skills to real-world
-                projects.</p>
         </section>
     </main>
 
     <footer>
-        <div>
-            <a href="https://github.com/essodong-pro">GitHub</a>
-            <a href="https://linkedin.com/in/yourlinkedin">LinkedIn</a>
-            <a href="mailto:guillaumengnama@gmail.com">Email</a>
+        <div class="social-links">
+            <a href="https://linkedin.com/in/essodong" target="_blank"><img src="images/linkedin-icon.png"
+                    alt="LinkedIn"></a>
+            <a href="https://github.com/essodong" target="_blank"><img src="images/github-icon.png" alt="GitHub"></a>
+            <a href="https://twitter.com/essodong" target="_blank"><img src="images/x-icon.png" alt="X"></a>
         </div>
-        <div>
-            <p>&copy; <span id="currentyear"></span> Essodong N'GNAMA - Togo</p>
-        </div>
-        <div>
-            <p id="lastModified"></p>
-        </div>
+        <p>&copy; <span id="currentyear"></span> • Essodong N'GNAMA • Togo</p>
+        <p id="lastModified"></p>
     </footer>
 </body>
 

@@ -1,36 +1,32 @@
 @media (min-width: 768px) {
-    header {
-        justify-content: flex-start;
+
+    /* Navigation horizontale */
+    nav {
+        display: flex !important;
+        flex-direction: row;
+        justify-content: center;
     }
 
     #menuButton {
         display: none;
     }
 
-    nav {
-       
-        display: flex !important;
-        flex-direction: row;
-        justify-content: center;
-    }
-
     nav a {
-        border: none;
-        padding: 1rem 2rem;
+        border-bottom: none;
+        border-right: 1px solid #004466;
     }
 
-    main {
+    nav a:last-child {
+        border-right: none;
+    }
+
+    .top-grid {
         display: grid;
         grid-template-columns: 2fr 1fr;
-        gap: 2rem;
-        padding: 2rem;
+        gap: 20px;
     }
 
-    footer {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        text-align: left;
-        padding: 1rem 2rem;
+    .course-container {
+        grid-template-columns: repeat(3, 1fr);
     }
 }
