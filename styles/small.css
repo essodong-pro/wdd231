@@ -1,15 +1,16 @@
+
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     line-height: 1.6;
     background-color: #f4f4f4;
-    color: #333;
+    color: #333333;
 }
 
 header {
     background-color: #004466;
-    color: white;
-    padding: 0.5rem 1rem;
+    color: #ffffff;
+    padding: 1rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -22,24 +23,23 @@ header {
 }
 
 .logo {
-    max-height: 50px;
-
-    width: auto;
+    width: 50px;
+    height: 50px;
     display: block;
 }
 
 #menuButton {
     background: none;
     border: none;
-    color: white;
+    color: #ffffff;
     font-size: 2rem;
     cursor: pointer;
 }
 
-
+/* --- NAVIGATION --- */
 nav {
     display: none;
-    background-color: #00334d;
+    background-color: #333333;
 }
 
 nav.open {
@@ -48,47 +48,52 @@ nav.open {
 }
 
 nav a {
-    color: white;
+    color: #ffffff;
     padding: 1rem;
     text-decoration: none;
     text-align: center;
-    border-bottom: 1px solid #004466;
+    border-bottom: 1px solid #444;
 }
 
 nav a.active {
-    background-color: #005580;
+    background-color: #004466;
     font-weight: bold;
 }
 
-
+/* --- MAIN CONTENT & MOBILE GRID --- */
 main {
     padding: 1rem;
     max-width: 1200px;
     margin: 0 auto;
 }
 
+.top-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
 h1 {
     text-align: center;
     color: #004466;
+    border-bottom: 1px solid #dbdbdb;
+    padding-bottom: 10px;
 }
 
-
 .card {
-    border: 1px solid #ccc;
-    background-color: #fff;
-    margin-bottom: 1.5rem;
+    border: 1px solid #cccccc;
+    background-color: #ffffff;
+    margin-bottom: 1rem;
     border-radius: 5px;
     overflow: hidden;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .card-header {
-    background-color: #333;
-    color: white;
+    background-color: #333333;
+    color: #ffffff;
     margin: 0;
     padding: 0.75rem;
     text-align: center;
-    font-size: 1.2rem;
 }
 
 .card-content {
@@ -96,86 +101,70 @@ h1 {
 }
 
 .photo-box img {
-    width: 100%;
-    max-width: 200px;
-    height: auto;
+    width: 200px;
+    height: 160px;
+    object-fit: cover;
     display: block;
     margin: 0 auto;
     border-radius: 5px;
 }
 
-
-.filters {
-    display: flex;
-    gap: 10px;
-    margin-bottom: 1rem;
-    justify-content: center;
-}
-
-.filters button {
-    padding: 10px 20px;
-    background-color: #eee;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background 0.3s;
-}
-
-.filters button:hover {
-    background-color: #ddd;
-}
-
+/* --- COURSE GRID --- */
 .course-container {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 10px;
+    gap: 15px;
 }
 
 .course-card {
-    padding: 15px;
-    border: 1px solid #bbb;
+    padding: 20px;
+    border: 1px solid #cccccc;
     border-radius: 5px;
     text-align: center;
     font-weight: bold;
-    background-color: #f9f9f9;
+    background-color: #dbdbdb;
 }
 
 .course-card.completed {
     background-color: #d4edda;
     color: #155724;
-    border-color: #c3e6cb;
 }
 
 .course-card.not-completed {
     background-color: #f8d7da;
-    color: #721c24;
-    border-color: #f5c6cb;
+    color: #333333;
 }
 
-.credits-display {
-    text-align: center;
-    font-weight: bold;
-    margin-top: 1rem;
-}
-
-/* --- Footer --- */
+/* --- FOOTER --- */
 footer {
-    background-color: #004466;
-    color: white;
-    text-align: center;
-    padding: 1.5rem;
-    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 20px 0 0 0;
+    color: #333333;
 }
 
 .social-links {
     display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin-bottom: 1rem;
+    gap: 25px;
+    margin-bottom: 20px;
 }
 
 .social-links img {
-    width: 30px;
-    height: 30px;
-    filter: brightness(0) invert(1);
+    width: 35px;
+    height: 35px;
+}
+
+.footer-info {
+    background-color: #dbdbdb;
+    width: 100%;
+    padding: 15px 0;
+    text-align: center;
+    border-top: 1px solid #cccccc;
+}
+
+.footer-info p {
+    margin: 4px 0;
+    font-size: 0.9rem;
 }

@@ -3,8 +3,8 @@ const courses = [
     { code: "CSE 111", name: "Programming with Functions", credits: 2, category: "CSE", completed: false },
     { code: "CSE 210", name: "Programming with Classes", credits: 2, category: "CSE", completed: false },
     { code: "WDD 130", name: "Web Fundamentals", credits: 3, category: "WDD", completed: true },
-    { code: "WDD 131", name: "Responsive Web Design", credits: 3, category: "WDD", completed: true },
-    { code: "WDD 231", name: "Front-End Development", credits: 3, category: "WDD", completed: false }
+    { code: "WDD 131", name: "Dynamic Web Fundamentals", credits: 3, category: "WDD", completed: true },
+    { code: "WDD 231", name: "Web Frontend Development I", credits: 3, category: "WDD", completed: false }
 ];
 
 function displayCourses(filter = "All") {
