@@ -1,21 +1,21 @@
-/* General Layout */
+
 body {
-    font-family: 'Roboto', Arial, sans-serif;
+    /* Adding Arial as the primary fallback minimizes width-jump during font swap */
+    font-family: 'Roboto', Arial, system-ui, -apple-system, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f5f7fa;
-    color: #000;
+    color: #333;
+    line-height: 1.5;
 }
 
-/* Header & Footer */
+/* 2. HEADER & FOOTER */
 header,
 footer {
     background-color: #005580;
-   
     color: #ffffff;
-
     text-align: center;
-    padding: 1rem;
+    padding: 1.5rem 1rem;
 }
 
 header *,
@@ -23,24 +23,23 @@ footer * {
     color: #ffffff;
 }
 
-/* Navigation */
+/* 3. NAVIGATION */
 nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     gap: 1.5rem;
-}
-
-nav li {
-    margin: 0;
 }
 
 nav a {
     color: #ffcc00;
     text-decoration: none;
     font-weight: 700;
+    padding: 0.7rem;
+    transition: color 0.2s ease;
 }
 
 nav a:hover {
@@ -48,70 +47,135 @@ nav a:hover {
     text-decoration: underline;
 }
 
-/* View Buttons */
+/* 4. VIEW TOGGLE BUTTONS */
 .view-buttons {
     text-align: center;
-    margin: 1rem 0;
+    margin: 2rem 0;
 }
 
 .view-buttons button {
     background-color: #004466;
     color: #ffffff;
-    border: none;
-    padding: 0.7rem 1.4rem;
-    margin: 0.4rem;
-    border-radius: 6px;
+    border: 1px solid #003355;
+    padding: 0.8rem 1.5rem;
+    margin: 0.25rem;
+    border-radius: 4px;
     font-weight: 600;
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    transition: background 0.3s;
 }
 
-.view-buttons button:hover {
-    background-color: #0077aa;
-    transform: scale(1.05);
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
-}
-
-/* Member Cards */
+/* 5. MEMBERS CONTAINER */
 .members {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 1rem;
+    gap: 1.5rem;
     padding: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    min-height: 60vh;
 }
 
+/* GRID VIEW - Mobile First */
 .members.grid {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
-.members.list {
+.member-card {
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 1.5rem;
+    text-align: center;
+    background-color: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.member-card img {
     display: block;
+    width: 100%;
+    max-width: 100%;
+    aspect-ratio: 16 / 10;
+    height: auto;
+    border-radius: 8px;
+    background-color: #eee;
+    object-fit: cover;
+    margin-bottom: 1rem;
 }
 
 .members.list .member-card {
     display: flex;
+    flex-direction: row;
     align-items: center;
-    gap: 1rem;
     text-align: left;
+    gap: 1.5rem;
+    min-height: auto;
 }
 
-.member-card {
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    padding: 1rem;
+.members.list .member-card img {
+    width: 120px;
+    aspect-ratio: 1 / 1;
+    margin-bottom: 0;
+    flex-shrink: 0;
+}
+
+h1 {
     text-align: center;
-    background-color: #ffffff;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    margin-top: 1.5rem;
 }
 
-.member-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+.member-card h2 {
+    margin: 0.5rem 0;
+    font-size: 1.4rem;
 }
 
-.member-card img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 6px;
+.member-card p {
+    margin: 0.3rem 0;
+    font-size: 0.95rem;
+}
+
+.member-card a {
+    color: #005580;
+    font-weight: bold;
+}
+
+@media (min-width: 768px) {
+
+    header,
+    footer {
+        padding: 2rem 5%;
+    }
+
+    nav ul {
+        justify-content: flex-end;
+        padding-right: 2rem;
+    }
+
+    .members.grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+
+    .members.list .member-card {
+        display: grid;
+        grid-template-columns: 200px 1fr auto;
+        gap: 2.5rem;
+        padding: 1.5rem 2rem;
+    }
+
+    .members.list .member-card img {
+        width: 200px;
+        aspect-ratio: 16 / 10;
+    }
+
+    .member-card {
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .member-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+    }
 }

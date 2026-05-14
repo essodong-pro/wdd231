@@ -4,7 +4,9 @@
         "address": "123 Main St, Lomé",
         "phone": "+228 71 53 46 67",
         "website": "https://onetpressing.com",
-        "image": "onet.jpg",
+        "image": "onet.webp",
+        "width": 400,
+        "height": 250,
         "membership": 3,
         "info": "Professional laundry and dry cleaning services."
     },
@@ -13,7 +15,9 @@
         "address": "45 Innovation Ave, Lomé",
         "phone": "+228 70 00 11 22",
         "website": "https://techsolutions.tg",
-        "image": "tech.jpeg",
+        "image": "tech.webp",
+        "width": 400,
+        "height": 250,
         "membership": 2,
         "info": "IT consulting and software development."
     },
@@ -22,7 +26,9 @@
         "address": "Farm Road, Kpalimé",
         "phone": "+228 72 33 44 55",
         "website": "https://greenfarms.tg",
-        "image": "farm.jpeg",
+        "image": "farm.webp",
+        "width": 400,
+        "height": 250,
         "membership": 1,
         "info": "Organic produce and sustainable farming."
     }
