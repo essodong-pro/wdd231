@@ -1,0 +1,23 @@
+{
+    "family_name": "N'GNAMA",
+        "move_in_date": "2025-03-12",
+            "number_of_people": 3,
+                "visited_by_bishopric": false,
+                    "family_members": [
+                        {
+                            "name": "Essodong N'GNAMA",
+                            "gender": "Male",
+                            "birthdate": "1998-07-21"
+                        },
+                        {
+                            "name": "Akofa N'GNAMA",
+                            "gender": "Female",
+                            "birthdate": "2000-11-05"
+                        },
+                        {
+                            "name": "Kossi N'GNAMA",
+                            "gender": "Male",
+                            "birthdate": "2015-04-18"
+                        }
+                    ]
+}

@@ -1,0 +1,7 @@
+nav ul {
+    justify-content: flex-start;
+}
+
+.members.grid {
+    grid-template-columns: repeat(3, 1fr);
+}

@@ -1,0 +1,29 @@
+[
+    {
+        "name": "O’NET Pressing",
+        "address": "123 Main St, Lomé",
+        "phone": "+228 71 53 46 67",
+        "website": "https://onetpressing.com",
+        "image": "onet.png",
+        "membership": 3,
+        "info": "Professional laundry and dry cleaning services."
+    },
+    {
+        "name": "Tech Solutions Togo",
+        "address": "45 Innovation Ave, Lomé",
+        "phone": "+228 70 00 11 22",
+        "website": "https://techsolutions.tg",
+        "image": "tech.png",
+        "membership": 2,
+        "info": "IT consulting and software development."
+    },
+    {
+        "name": "Green Farms",
+        "address": "Farm Road, Kpalimé",
+        "phone": "+228 72 33 44 55",
+        "website": "https://greenfarms.tg",
+        "image": "farm.png",
+        "membership": 1,
+        "info": "Organic produce and sustainable farming."
+    }
+]

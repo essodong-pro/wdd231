@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chamber Directory</title>
+    <meta name="description" content="Discover local businesses in our chamber of commerce.">
+    <meta name="author" content="Guillaume">
+
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+    <!-- Social Media Meta -->
+    <meta property="og:title" content="Chamber Directory">
+    <meta property="og:description" content="Explore our chamber members and their services.">
+    <meta property="og:image" content="images/social-preview.png">
+    <meta property="og:url" content="https://yourgithubpagesurl/chamber/directory.html">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/large.css">
+
+    <!-- JavaScript -->
+    <script src="scripts/directory.js" defer></script>
+    <script src="scripts/date.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>Chamber of Commerce</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="view-buttons">
+            <button id="grid">Grid View</button>
+            <button id="list">List View</button>
+        </div>
+        <section class="members"></section>
+    </main>
+
+    <footer>
+        <p>Contact: engnama@byupathway.edu | +228 71 53 46 67</p>
+        <p>&copy; <span id="currentyear"></span> | Guillaume | WDD 231</p>
+        <p>Last Modified: <span id="lastModified"></span></p>
+    </footer>
+</body>
+
+</html>
