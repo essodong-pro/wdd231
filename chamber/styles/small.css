@@ -1,6 +1,6 @@
 
 body {
-    /* Adding Arial as the primary fallback minimizes width-jump during font swap */
+    
     font-family: 'Roboto', Arial, system-ui, -apple-system, sans-serif;
     margin: 0;
     padding: 0;
@@ -81,6 +81,7 @@ nav a:hover {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
+/* 6. MEMBER CARDS */
 .member-card {
     border: 1px solid #ddd;
     border-radius: 12px;
@@ -93,6 +94,7 @@ nav a:hover {
     justify-content: space-between;
 }
 
+/* 7. PERFORMANCE: Aspect Ratio */
 .member-card img {
     display: block;
     width: 100%;
@@ -105,6 +107,7 @@ nav a:hover {
     margin-bottom: 1rem;
 }
 
+/* 8. LIST VIEW - Mobile First */
 .members.list .member-card {
     display: flex;
     flex-direction: row;
@@ -121,6 +124,7 @@ nav a:hover {
     flex-shrink: 0;
 }
 
+/* 9. TEXT ELEMENTS */
 h1 {
     text-align: center;
     margin-top: 1.5rem;
@@ -139,43 +143,4 @@ h1 {
 .member-card a {
     color: #005580;
     font-weight: bold;
-}
-
-@media (min-width: 768px) {
-
-    header,
-    footer {
-        padding: 2rem 5%;
-    }
-
-    nav ul {
-        justify-content: flex-end;
-        padding-right: 2rem;
-    }
-
-    .members.grid {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 2rem;
-    }
-
-    .members.list .member-card {
-        display: grid;
-        grid-template-columns: 200px 1fr auto;
-        gap: 2.5rem;
-        padding: 1.5rem 2rem;
-    }
-
-    .members.list .member-card img {
-        width: 200px;
-        aspect-ratio: 16 / 10;
-    }
-
-    .member-card {
-        transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-
-    .member-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
-    }
 }

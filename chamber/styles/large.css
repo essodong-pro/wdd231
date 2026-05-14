@@ -8,30 +8,24 @@
 
     nav ul {
         justify-content: flex-end;
-        padding-right: 5%;
+        padding-right: 2rem;
     }
 
-    
     .members.grid {
         grid-template-columns: repeat(3, 1fr);
         gap: 2rem;
-        padding: 2rem 5%;
-        max-width: 1400px;
-        margin: 0 auto;
     }
 
+    /* Desktop List View Optimization */
     .members.list .member-card {
         display: grid;
         grid-template-columns: 200px 1fr auto;
-        align-items: center;
-        text-align: left;
-        padding: 1.5rem 2.5rem;
         gap: 2.5rem;
+        padding: 1.5rem 2rem;
     }
 
     .members.list .member-card img {
         width: 200px;
-        margin-bottom: 0;
         aspect-ratio: 16 / 10;
     }
 
@@ -42,9 +36,5 @@
     .member-card:hover {
         transform: translateY(-5px);
         box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
-    }
-
-    .member-card h2 {
-        font-size: 1.6rem;
     }
 }
