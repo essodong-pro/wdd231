@@ -11,10 +11,16 @@ body {
 header,
 footer {
     background-color: #005580;
-    /* softer navy */
+   
     color: #ffffff;
+
     text-align: center;
     padding: 1rem;
+}
+
+header *,
+footer * {
+    color: #ffffff;
 }
 
 /* Navigation */
@@ -33,7 +39,6 @@ nav li {
 
 nav a {
     color: #ffcc00;
-    /* gold accent */
     text-decoration: none;
     font-weight: 700;
 }
