@@ -1,7 +1,14 @@
-nav ul {
-    justify-content: flex-start;
-}
+@media (min-width: 768px) {
+    nav ul {
+        justify-content: flex-start;
+    }
 
-.members.grid {
-    grid-template-columns: repeat(3, 1fr);
+    .members.grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+    }
+
+    .member-card {
+        padding: 1.5rem;
+    }
 }
