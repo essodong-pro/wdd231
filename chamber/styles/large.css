@@ -1,4 +1,4 @@
-
+/* LARGE SCREEN ENHANCEMENTS (Desktop) */
 @media (min-width: 768px) {
 
     header,
@@ -6,29 +6,36 @@
         padding: 2rem 5%;
     }
 
+    /* Moves navigation to the right for a standard desktop look */
     nav ul {
         justify-content: flex-end;
         padding-right: 2rem;
     }
 
+    /* 3-Column Grid Layout */
     .members.grid {
         grid-template-columns: repeat(3, 1fr);
         gap: 2rem;
     }
 
-    /* Desktop List View Optimization */
+    /* Advanced Desktop List View: Uses Grid for perfect alignment */
     .members.list .member-card {
         display: grid;
         grid-template-columns: 200px 1fr auto;
+        /* [Image: 200px] [Text: Flexible] [Links/Level: Auto] */
+        align-items: center;
         gap: 2.5rem;
         padding: 1.5rem 2rem;
+        text-align: left;
     }
 
     .members.list .member-card img {
         width: 200px;
         aspect-ratio: 16 / 10;
+        margin-bottom: 0;
     }
 
+    /* Interactive Hover Effects */
     .member-card {
         transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
