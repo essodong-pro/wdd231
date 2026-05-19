@@ -31,5 +31,60 @@
         "height": 250,
         "membership": 1,
         "info": "Organic produce and sustainable farming."
+    },
+    {
+        "name": "Lomé Logistics Services",
+        "address": "89 Port Road, Lomé",
+        "phone": "+228 22 21 45 89",
+        "website": "https://lomelogistics.tg",
+        "image": "logistics.webp",
+        "width": 400,
+        "height": 250,
+        "membership": 2,
+        "info": "Fast and secure freight forwarding and cargo management."
+    },
+    {
+        "name": "Eko Eco-Market",
+        "address": "12 Boulevard Circulaire, Lomé",
+        "phone": "+228 90 12 34 56",
+        "website": "https://ekomarket.tg",
+        "image": "eko.webp",
+        "width": 400,
+        "height": 250,
+        "membership": 1,
+        "info": "Your neighborhood shop for zero-waste packaging and local food items."
+    },
+    {
+        "name": "AfroDev Agency",
+        "address": "56 Rue de l'Ocam, Lomé",
+        "phone": "+228 99 88 77 66",
+        "website": "https://afrodev.tg",
+        "image": "afrodev.webp",
+        "width": 400,
+        "height": 250,
+        "membership": 3,
+        "info": "Custom web application design and digital transformation strategies."
+    },
+    {
+        "name": "Togo Clean Power",
+        "address": "77 Solar Way, Atakpamé",
+        "phone": "+228 24 41 12 23",
+        "website": "https://togocleanpower.tg",
+        "image": "togoclean.webp",
+        "width": 400,
+        "height": 250,
+        "membership": 2,
+        "info": "Renewable energy solutions and solar panel installations for homes."
+    },
+    {
+        "name": "Assivito Bakery",
+        "address": "104 Rue du Grand Marché, Lomé",
+        "phone": "+228 22 22 11 00",
+        "website": "https://assivitobakery.tg",
+        "image": "assivito.webp",
+        "width": 400,
+        "height": 250,
+        "membership": 1,
+        "info": "Fresh traditional breads and premium pastries baked daily."
     }
 ]

@@ -41,12 +41,20 @@ nav a {
     font-weight: 700;
     padding: 0.75rem;
     /* Large enough for mobile tap targets */
-    transition: color 0.2s ease;
+    transition: background-color 0.2s, color 0.2s;
+    border-radius: 4px;
 }
 
 nav a:hover {
     color: #ffffff;
     text-decoration: underline;
+}
+
+nav a.active {
+    background-color: #ffffff;
+    color: #005580 !important;
+    /* Forces dark contrast on a bright white block */
+    text-decoration: none;
 }
 
 /* 4. VIEW TOGGLE BUTTONS */
@@ -116,17 +124,14 @@ nav a:hover {
 /* 8. LIST VIEW - Mobile First */
 .members.list .member-card {
     display: flex;
-    flex-direction: row;
-    align-items: center;
+    flex-direction: column;
     text-align: left;
-    gap: 1.5rem;
+    gap: 0.5rem;
+    padding: 1rem;
 }
 
 .members.list .member-card img {
-    width: 100px;
-    aspect-ratio: 1 / 1;
-    margin-bottom: 0;
-    flex-shrink: 0;
+    display: none;
 }
 
 /* 9. TEXT ELEMENTS */

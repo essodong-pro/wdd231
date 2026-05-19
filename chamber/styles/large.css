@@ -6,7 +6,7 @@
         padding: 2rem 5%;
     }
 
-    /* Moves navigation to the right for a standard desktop look */
+   
     nav ul {
         justify-content: flex-end;
         padding-right: 2rem;
@@ -18,30 +18,34 @@
         gap: 2rem;
     }
 
-    /* Advanced Desktop List View: Uses Grid for perfect alignment */
     .members.list .member-card {
         display: grid;
-        grid-template-columns: 200px 1fr auto;
-        /* [Image: 200px] [Text: Flexible] [Links/Level: Auto] */
+       
+        grid-template-columns: 2fr 1fr auto;
+       
         align-items: center;
         gap: 2.5rem;
         padding: 1.5rem 2rem;
         text-align: left;
     }
 
+    
     .members.list .member-card img {
-        width: 200px;
-        aspect-ratio: 16 / 10;
-        margin-bottom: 0;
+        display: none;
     }
 
-    /* Interactive Hover Effects */
+   
     .member-card {
         transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
 
-    .member-card:hover {
+    
+    .members.grid .member-card:hover {
         transform: translateY(-5px);
         box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+    }
+
+    .members.list .member-card:hover {
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
     }
 }

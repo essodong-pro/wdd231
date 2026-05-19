@@ -60,4 +60,6 @@ listButton.addEventListener('click', () => {
     display.classList.remove('grid');
 });
 
+display.classList.add('grid');
+
 loadMembers();
