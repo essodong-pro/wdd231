@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Chamber of Commerce - Lomé Home</title>
+
+    <meta name="description"
+        content="Welcome to the Chamber of Commerce home page. Connecting local businesses and fostering economic growth in Lomé, Togo.">
+    <meta name="author" content="Guillaume Essodong N'GNAMA">
+
+    <meta property="og:title" content="Chamber of Commerce Home - Lomé">
+    <meta property="og:description"
+        content="Connect with community partners, view live local weather, and explore premium business spotlights in Lomé.">
+    <meta property="og:image" content="https://essodong-pro.github.io/wdd231/chamber/images/social-preview.webp">
+    <meta property="og:url" content="https://essodong-pro.github.io/wdd231/chamber/index.html">
+    <meta property="og:type" content="website">
+
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="preload" as="font" href="https://fonts.gstatic.com/s/roboto/v30/KFOkCnqEu92Fr1MmgVxFIzIXKMnyrYk.woff2"
+        type="font/woff2" crossorigin>
+
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/large.css" media="(min-width: 768px)">
+
+    <script src="scripts/main.js" defer></script>
+    <script src="scripts/date.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="home-grid">
+        <section class="hero-section">
+            <div class="hero-wrapper">
+                <img src="images/social-preview.webp" alt="Lomé Business District Banner" class="hero-image">
+                <div class="cta-box">
+                    <h1>Empowering Lomé's Economy</h1>
+                    <p>Join forces with the top business network in Togo.</p>
+                    <a href="join.html" class="cta-button">Join the Chamber</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="events-section">
+            <h2>Upcoming Community Events</h2>
+            <div class="event-card">
+                <h3>Lomé Tech & Trade Summit</h3>
+                <p class="event-date">June 24, 2026</p>
+                <p>An evening of premium networking with regional founders, trade specialists, and investors.</p>
+            </div>
+        </section>
+
+        <section class="weather-section">
+            <h2>Local Weather</h2>
+            <div id="weather-card">
+                <p>Gathering current weather conditions for Lomé...</p>
+            </div>
+            <h3>3-Day Forecast</h3>
+            <div id="forecast-card">
+            </div>
+        </section>
+
+        <section class="spotlights-section">
+            <h2>Business Spotlights</h2>
+            <div id="spotlight-container">
+                <p>Loading premier local businesses...</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Contact: engnama@byupathway.edu | +228 71 53 46 67</p>
+        <p>&copy; <span id="currentyear"></span> | Guillaume Essodong N'GNAMA | WDD 231</p>
+        <p>Last Modified: <span id="lastModified"></span></p>
+    </footer>
+</body>
+
+</html>

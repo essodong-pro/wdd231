@@ -1,15 +1,19 @@
-/* 1. RESET & BASE */
+/* ==========================================================================
+   1. RESET & BASE
+   ========================================================================== */
 body {
     /* Arial provides a stable width fallback for Roboto to prevent layout shifts */
     font-family: 'Roboto', Arial, system-ui, -apple-system, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f5f7fa;
-    color: #333;
+    color: #333333;
     line-height: 1.5;
 }
 
-/* 2. HEADER & FOOTER */
+/* ==========================================================================
+   2. HEADER & FOOTER
+   ========================================================================== */
 header,
 footer {
     background-color: #005580;
@@ -23,7 +27,14 @@ footer * {
     color: #ffffff;
 }
 
-/* 3. NAVIGATION */
+footer p {
+    margin: 0.5rem 0;
+    font-size: 0.9rem;
+}
+
+/* ==========================================================================
+   3. NAVIGATION
+   ========================================================================== */
 nav ul {
     list-style: none;
     padding: 0;
@@ -57,7 +68,9 @@ nav a.active {
     text-decoration: none;
 }
 
-/* 4. VIEW TOGGLE BUTTONS */
+/* ==========================================================================
+   4. VIEW TOGGLE BUTTONS
+   ========================================================================== */
 .view-buttons {
     text-align: center;
     margin: 2rem 0;
@@ -75,7 +88,9 @@ nav a.active {
     transition: background 0.3s;
 }
 
-/* 5. MEMBERS CONTAINER */
+/* ==========================================================================
+   5. MEMBERS CONTAINER (Directory)
+   ========================================================================== */
 .members {
     display: grid;
     /* Mandatory Grid use for Audit */
@@ -93,7 +108,9 @@ nav a.active {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
-/* 6. MEMBER CARDS */
+/* ==========================================================================
+   6. MEMBER CARDS
+   ========================================================================== */
 .member-card {
     border: 1px solid #ddd;
     border-radius: 12px;
@@ -107,7 +124,9 @@ nav a.active {
     justify-content: space-between;
 }
 
-/* 7. PERFORMANCE: Aspect Ratio */
+/* ==========================================================================
+   7. PERFORMANCE: Aspect Ratio
+   ========================================================================== */
 .member-card img {
     display: block;
     width: 100%;
@@ -121,7 +140,9 @@ nav a.active {
     margin-bottom: 1rem;
 }
 
-/* 8. LIST VIEW - Mobile First */
+/* ==========================================================================
+   8. LIST VIEW - Mobile First
+   ========================================================================== */
 .members.list .member-card {
     display: flex;
     flex-direction: column;
@@ -134,10 +155,13 @@ nav a.active {
     display: none;
 }
 
-/* 9. TEXT ELEMENTS */
+/* ==========================================================================
+   9. TEXT ELEMENTS & GENERAL LAYOUT
+   ========================================================================== */
 h1 {
     text-align: center;
     margin-top: 1.5rem;
+    color: #003355;
 }
 
 .member-card h2 {
@@ -154,4 +178,254 @@ h1 {
     color: #005580;
     font-weight: bold;
     word-break: break-all;
+}
+
+/* ==========================================================================
+   10. HOME PAGE CONTENT (index.html - Mobile First)
+   ========================================================================== */
+.home-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.home-grid section {
+    background-color: #ffffff;
+    padding: 1.5rem;
+    border-radius: 12px;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+
+.home-grid .hero-section {
+    padding: 0;
+    overflow: hidden;
+    position: relative;
+    border: none;
+}
+
+.hero-wrapper {
+    position: relative;
+    display: block;
+}
+
+.hero-image {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    display: block;
+}
+
+.cta-box {
+    position: absolute;
+    bottom: 5%;
+    left: 5%;
+    right: 5%;
+    background-color: rgba(0, 51, 85, 0.9);
+    color: #ffffff;
+    text-align: center;
+    padding: 1.25rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.cta-box h1 {
+    color: #ffcc00;
+    margin: 0 0 0.4rem 0;
+    font-size: 1.3rem;
+}
+
+.cta-box p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #ffcc00;
+    color: #003355 !important;
+    font-weight: 700;
+    text-decoration: none;
+    padding: 0.6rem 1.2rem;
+    margin-top: 0.75rem;
+    border-radius: 4px;
+    transition: background 0.2s;
+}
+
+.cta-button:hover {
+    background-color: #ffffff;
+}
+
+
+.home-grid h2 {
+    color: #005580;
+    margin-top: 0;
+    border-bottom: 2px solid #ffcc00;
+    padding-bottom: 0.5rem;
+    font-size: 1.4rem;
+}
+
+.event-card,
+#weather-card,
+#forecast-card,
+#spotlight-container {
+    margin-top: 1rem;
+}
+
+.event-date {
+    font-weight: bold;
+    color: #005580;
+}
+
+/* ==========================================================================
+   11. DYNAMIC JAVASCRIPT ELEMENTS STYLING (Mobile-First)
+   ========================================================================== */
+
+
+.weather-current-layout {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.weather-digits {
+    text-align: left;
+}
+
+.current-temp-text {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin: 0;
+    color: #003355;
+}
+
+.current-desc-text {
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    margin: 0;
+    color: #222222;
+    font-weight: 700;
+}
+
+
+.forecast-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.6rem 0;
+    border-bottom: 1px dashed #ddd;
+}
+
+.forecast-item:last-child {
+    border-bottom: none;
+}
+
+.forecast-day-label {
+    font-weight: 700;
+    color: #333333;
+}
+
+.forecast-temp-val {
+    color: #005580;
+    font-weight: 700;
+}
+
+/* Cartes Spotlight */
+.spotlight-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    background-color: #fcfcfc;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+}
+
+.spotlight-logo-wrap {
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0;
+}
+
+.spotlight-logo-wrap img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.tier-gold {
+    border-top: 4px solid #d4af37;
+}
+
+.tier-silver {
+    border-top: 4px solid #a6a6a6;
+}
+
+.membership-tag {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 0.25rem 0.6rem;
+    border-radius: 4px;
+    margin: 0 0 1rem 0;
+}
+
+.tier-gold .membership-tag {
+    background-color: #fff8e7;
+    color: #836200;
+}
+
+.tier-silver .membership-tag {
+    background-color: #f2f2f2;
+    color: #333333;
+}
+
+.spotlight-info {
+    font-style: italic;
+    color: #333333;
+    margin: 0.5rem 0;
+}
+
+.spotlight-contact {
+    font-size: 0.85rem;
+    margin: 0.3rem 0;
+    color: #222222;
+    text-align: left;
+}
+
+.spotlight-link {
+    display: inline-block;
+    margin-top: 1rem;
+    color: #005580;
+    font-weight: 700;
+    text-decoration: none;
+    border: 1px solid #005580;
+    padding: 0.4rem 1rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    transition: background 0.2s, color 0.2s;
+}
+
+.spotlight-link:hover {
+    background-color: #005580;
+    color: #ffffff;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid #eee;
+    margin: 1rem 0;
+}
+
+.error-msg {
+    color: #c0392b;
+    font-style: italic;
 }

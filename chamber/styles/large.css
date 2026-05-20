@@ -1,51 +1,155 @@
-/* LARGE SCREEN ENHANCEMENTS (Desktop) */
-@media (min-width: 768px) {
+/* ==========================================================================
+   LARGE SCREEN ENHANCEMENTS (Desktop)
+   ========================================================================== */
 
-    header,
-    footer {
-        padding: 2rem 5%;
-    }
+/* ==========================================================================
+   1. HEADER & FOOTER
+   ========================================================================== */
+header,
+footer {
+    padding: 2rem 5%;
+}
 
-   
-    nav ul {
-        justify-content: flex-end;
-        padding-right: 2rem;
-    }
+/* ==========================================================================
+   2. NAVIGATION
+   ========================================================================== */
+nav ul {
+    justify-content: flex-end;
+    padding-right: 2rem;
+}
 
-    /* 3-Column Grid Layout */
-    .members.grid {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 2rem;
-    }
+/* ==========================================================================
+   3. DIRECTORY - GRID VIEW (3-Column Layout)
+   ========================================================================== */
+.members.grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
 
-    .members.list .member-card {
-        display: grid;
-       
-        grid-template-columns: 2fr 1fr auto;
-       
-        align-items: center;
-        gap: 2.5rem;
-        padding: 1.5rem 2rem;
-        text-align: left;
-    }
+/* ==========================================================================
+   4. DIRECTORY - LIST VIEW
+   ========================================================================== */
+.members.list .member-card {
+    display: grid;
+    grid-template-columns: 2fr 1fr minmax(auto, max-content);
+    align-items: center;
+    gap: 2.5rem;
+    padding: 1.5rem 2rem;
+    text-align: left;
+}
 
+.members.list .member-card img {
+    display: none;
+}
+
+/* ==========================================================================
+   5. INTERACTION & ANIMATIONS (Directory)
+   ========================================================================== */
+.member-card {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.members.grid .member-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+}
+
+.members.list .member-card:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* ==========================================================================
+   6. HOME PAGE LAYOUT (.home-grid)
+   ========================================================================== */
+.home-grid {
+    grid-template-columns: repeat(3, 1fr);
     
-    .members.list .member-card img {
-        display: none;
-    }
+    gap: 2rem;
+    padding: 2rem 1rem;
+}
 
+
+.hero-section {
+    grid-column: 1 / -1;
+}
+
+
+.hero-wrapper {
+    display: block;
    
-    .member-card {
-        transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
+    position: relative;
+}
 
+.hero-image {
+    aspect-ratio: 21 / 9;
     
-    .members.grid .member-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
-    }
+    display: block;
+}
 
-    .members.list .member-card:hover {
-        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
-    }
+.cta-box {
+    position: absolute;
+    top: 50%;
+    bottom: auto;
+    
+    left: 5%;
+    right: auto;
+    
+    transform: translateY(-50%);
+    max-width: 450px;
+    background-color: rgba(0, 51, 85, 0.85);
+    backdrop-filter: blur(4px);
+    
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: left;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+.cta-box h1 {
+    text-align: left;
+    font-size: 2rem;
+    margin: 0 0 0.75rem 0;
+}
+
+.cta-box p {
+    text-align: left;
+    
+    font-size: 1.05rem;
+   
+    line-height: 1.4;
+}
+
+.cta-button {
+    margin-top: 1.25rem;
+    padding: 0.75rem 1.5rem;
+    
+}
+
+.events-section,
+.weather-section,
+.spotlights-section {
+    grid-column: span 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ==========================================================================
+   7. JAVASCRIPT LAYOUT ADJUSTMENTS FOR DESKTOP
+   ========================================================================== */
+
+#weather-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+#spotlight-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.spotlight-card {
+    margin-bottom: 0;
 }
