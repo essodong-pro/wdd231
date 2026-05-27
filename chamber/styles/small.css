@@ -1,7 +1,7 @@
 /* ==========================================================================
    1. RESET & BASE
    ========================================================================== */
-body {
+   body {
     /* Arial provides a stable width fallback for Roboto to prevent layout shifts */
     font-family: 'Roboto', Arial, system-ui, -apple-system, sans-serif;
     margin: 0;
@@ -200,7 +200,6 @@ h1 {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
-
 .home-grid .hero-section {
     padding: 0;
     overflow: hidden;
@@ -261,7 +260,6 @@ h1 {
     background-color: #ffffff;
 }
 
-
 .home-grid h2 {
     color: #005580;
     margin-top: 0;
@@ -285,8 +283,6 @@ h1 {
 /* ==========================================================================
    11. DYNAMIC JAVASCRIPT ELEMENTS STYLING (Mobile-First)
    ========================================================================== */
-
-
 .weather-current-layout {
     display: flex;
     align-items: center;
@@ -313,7 +309,6 @@ h1 {
     color: #222222;
     font-weight: 700;
 }
-
 
 .forecast-item {
     display: flex;
@@ -428,4 +423,261 @@ hr {
 .error-msg {
     color: #c0392b;
     font-style: italic;
+}
+
+/* ==========================================================================
+   12.FORMS, MODALS, AND CONFIRMATION LAYOUTS (Mobile-First)
+   ========================================================================== */
+.form-container {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.form-section form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    margin-top: 1rem;
+    background-color: #ffffff;
+    padding: 1.5rem;
+    border-radius: 12px;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.form-section label {
+    display: flex;
+    flex-direction: column;
+    font-weight: 700;
+    color: #003355;
+    gap: 0.4rem;
+}
+
+.form-section input[type="text"],
+.form-section input[type="email"],
+.form-section input[type="tel"],
+.form-section select,
+.form-section textarea {
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-family: 'Roboto', Arial, sans-serif;
+    width: 100%;
+    box-sizing: border-box;
+    font-weight: normal;
+    color: #333;
+}
+
+.form-section input:required {
+    border-left: 5px solid #005580;
+}
+
+.form-section input:focus,
+.form-section select:focus,
+.form-section textarea:focus {
+    outline: 2px solid #ffcc00;
+    background-color: #f7faff;
+}
+
+.submit-btn {
+    background-color: #005580;
+    color: #ffffff;
+    padding: 1rem;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 700;
+    transition: background 0.2s ease;
+}
+
+.submit-btn:hover {
+    background-color: #003355;
+    color: #ffcc00;
+}
+
+/* Membership Stagger Cards Section */
+.cards-section {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.cards-section h2 {
+    color: #005580;
+    margin-top: 0;
+    border-bottom: 2px solid #ffcc00;
+    padding-bottom: 0.5rem;
+    font-size: 1.4rem;
+}
+
+.membership-card {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+
+    opacity: 0;
+    transform: translateY(25px);
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.6s ease;
+}
+
+/* Custom level specific banner accent borders */
+.membership-card.np-card {
+    border-top: 4px solid #27ae60;
+}
+
+.membership-card.bronze-card {
+    border-top: 4px solid #cd7f32;
+}
+
+.membership-card.silver-card {
+    border-top: 4px solid #a6a6a6;
+}
+
+.membership-card.gold-card {
+    border-top: 4px solid #d4af37;
+}
+
+.membership-card.animate-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.modal-open-btn {
+    background-color: #004466;
+    color: #ffffff;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 0.5rem;
+    font-weight: bold;
+    transition: background 0.2s;
+}
+
+.modal-open-btn:hover {
+    background-color: #ffcc00;
+    color: #003355;
+}
+
+/* Accessible Native HTML Dialog Windows Backdrop */
+.membership-modal {
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+    padding: 0;
+    max-width: 500px;
+    width: 90%;
+}
+
+.membership-modal::backdrop {
+    background-color: rgba(0, 51, 85, 0.6);
+    backdrop-filter: blur(3px);
+}
+
+.modal-content {
+    padding: 2rem;
+}
+
+.modal-content h2 {
+    margin-top: 0;
+    color: #005580;
+    border-bottom: 2px solid #ffcc00;
+    padding-bottom: 0.5rem;
+}
+
+.modal-content ul {
+    margin: 1rem 0 1.5rem 1.2rem;
+    padding: 0;
+}
+
+.modal-content li {
+    margin-bottom: 0.5rem;
+}
+
+.modal-close-btn {
+    background-color: #c0392b;
+    color: white;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+    font-weight: bold;
+}
+
+/* Thank You Showcase Styles */
+.thankyou-box {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.thankyou-box h3 {
+    margin-top: 0;
+    color: #005580;
+    border-bottom: 2px solid #ffcc00;
+    padding-bottom: 0.4rem;
+}
+
+.thankyou-box p {
+    margin: 0.6rem 0;
+    font-size: 1.05rem;
+    border-bottom: 1px dashed #f0f0f0;
+    padding-bottom: 0.4rem;
+}
+
+.thankyou-box p:last-child {
+    border-bottom: none;
+}
+
+/* Thank You Page Clean Layout Rules */
+.thankyou-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    min-height: 60vh;
+}
+
+.thankyou-message {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.thankyou-message h1 {
+    color: #003355;
+    margin-bottom: 0.5rem;
+}
+
+.thankyou-message p {
+    font-size: 1.1rem;
+    color: #555555;
+}
+
+.thankyou-actions {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.thankyou-actions .cta-button {
+    text-decoration: none;
+}
+
+.thankyou-box h2 {
+    margin-top: 0;
+    color: #005580;
+    border-bottom: 2px solid #ffcc00;
+    padding-bottom: 0.4rem;
+    font-size: 1.3rem;
 }
