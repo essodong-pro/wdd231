@@ -84,7 +84,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
             }
 
-            // Updated to h2 to satisfy strict sequentially-descending heading audits
             outputContainer.innerHTML = `
                 <h2>Application Information Overview</h2>
                 <p><strong>First Name:</strong> ${firstName}</p>
@@ -118,7 +117,6 @@ function displayWeather(data) {
     const weatherCard = document.getElementById('weather-card');
     const forecastCard = document.getElementById('forecast-card');
 
-    // 1. Process Current Conditions
     const currentData = data.list[0];
     const currentTemp = Math.round(currentData.main.temp);
     const weatherDesc = currentData.weather[0].description;
@@ -147,7 +145,8 @@ function displayWeather(data) {
             const forecastTemp = Math.round(dayPoint.main.temp);
 
             const forecastElement = document.createElement('div');
-            forecastElement.className = 'forecast-item';
+            const classRef = 'forecast-item';
+            forecastElement.className = classRef;
             forecastElement.innerHTML = `
                 <span class="forecast-day-label">${dayStringName}:</span>
                 <span class="forecast-temp-val">${forecastTemp}°C</span>
@@ -164,13 +163,8 @@ async function fetchSpotlights() {
         if (!response.ok) throw new Error('Members JSON resource failed to load.');
         const membersList = await response.json();
 
-        // Filter: Keep only premium members (Gold = 3, Silver = 2)
         const premiumMembers = membersList.filter(member => member.membership === 3 || member.membership === 2);
-
-        // Randomize the premium array order
         const shuffledMembers = premiumMembers.sort(() => 0.5 - Math.random());
-
-        // Slice out either 2 or 3 items to show dynamically
         const selectedSpotlights = shuffledMembers.slice(0, 3);
 
         displaySpotlights(selectedSpotlights);
@@ -186,7 +180,6 @@ function displaySpotlights(selectedMembers) {
     container.innerHTML = '';
 
     selectedMembers.forEach(member => {
-        // Humanize membership value names for the badges
         const tierLabel = member.membership === 3 ? 'Gold' : 'Silver';
 
         const card = document.createElement('div');

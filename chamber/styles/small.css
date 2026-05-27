@@ -1,8 +1,6 @@
 /* ==========================================================================
-   1. FONTS & BASE RESET
+   1. RESET, FONTS & BASE
    ========================================================================== */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
-
 @font-face {
     font-family: 'Roboto-Fallback';
     src: local('Arial');
@@ -69,9 +67,10 @@ nav a:hover {
     text-decoration: underline;
 }
 
-nav a.active {
+/* Increased specificity chain to cleanly remove the forbidden !important */
+nav ul li a.active {
     background-color: #ffffff;
-    color: #005580 !important;
+    color: #005580;
     text-decoration: none;
 }
 
@@ -96,7 +95,7 @@ nav a.active {
 }
 
 /* ==========================================================================
-   5. MEMBERS & DIRECTORY CARDS
+   5. MEMBERS CONTAINER (Directory)
    ========================================================================== */
 .members {
     display: grid;
@@ -136,7 +135,6 @@ nav a.active {
     margin-bottom: 1rem;
 }
 
-/* List View Fallbacks */
 .members.list .member-card {
     display: flex;
     flex-direction: column;
@@ -149,7 +147,9 @@ nav a.active {
     display: none;
 }
 
-/* Typography Elements */
+/* ==========================================================================
+   6. TEXT ELEMENTS & GENERAL TYPOGRAPHY
+   ========================================================================== */
 h1 {
     text-align: center;
     margin-top: 1.5rem;
@@ -173,7 +173,7 @@ h1 {
 }
 
 /* ==========================================================================
-   6. HOME PAGE GRID LAYOUT
+   7. HOME PAGE CONTENT (index.html)
    ========================================================================== */
 .home-grid {
     display: grid;
@@ -239,7 +239,7 @@ h1 {
 .cta-button {
     display: inline-block;
     background-color: #ffcc00;
-    color: #003355 !important;
+    color: #003355;
     font-weight: 700;
     text-decoration: none;
     padding: 0.6rem 1.2rem;
@@ -273,7 +273,7 @@ h1 {
 }
 
 /* ==========================================================================
-   7. DYNAMIC JAVASCRIPT COMPONENTS
+   8. DYNAMIC JAVASCRIPT COMPONENTS
    ========================================================================== */
 .weather-current-layout {
     display: flex;
@@ -323,7 +323,7 @@ h1 {
     font-weight: 700;
 }
 
-/* Spotlight Components */
+/* Spotlight System */
 .spotlight-card {
     border: 1px solid #ddd;
     border-radius: 8px;
@@ -418,7 +418,7 @@ hr {
 }
 
 /* ==========================================================================
-   8. FORMS, MODALS & CONFIRMATION LAYOUTS
+   9. FORMS, MODALS & CONFIRMATIONS
    ========================================================================== */
 .form-container {
     padding: 1.5rem;
@@ -461,7 +461,6 @@ hr {
     font-family: 'Roboto', Arial, sans-serif;
     width: 100%;
     box-sizing: border-box;
-    font-weight: normal;
     color: #333;
 }
 
@@ -493,7 +492,6 @@ hr {
     color: #ffcc00;
 }
 
-/* Membership Selection Elements */
 .cards-section {
     display: flex;
     flex-direction: column;
@@ -604,7 +602,7 @@ hr {
     font-weight: bold;
 }
 
-/* Submission Target Block Styles */
+/* Thank You Output Showcase Elements */
 .thankyou-box {
     background-color: #ffffff;
     border: 1px solid #ddd;
