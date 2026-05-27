@@ -1,18 +1,15 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Chamber of Commerce - Join Lomé Chamber</title>
-
+    <title>Join Lomé Chamber of Commerce - Membership Application</title>
     <meta name="description"
         content="Join the Chamber of Commerce in Lomé, Togo. Select your membership tier and become part of our elite local business network.">
     <meta name="author" content="Guillaume Essodong N'GNAMA">
 
-    <meta property="og:title" content="Join Chamber of Commerce - Lomé">
+    <meta property="og:title" content="Join Lomé Chamber of Commerce - Application">
     <meta property="og:description"
         content="Fill out our application form, select your membership level, and explore the benefits of joining Lomé's top business ecosystem.">
     <meta property="og:image" content="https://essodong-pro.github.io/wdd231/chamber/images/social-preview.webp">
@@ -20,13 +17,9 @@
     <meta property="og:type" content="website">
 
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-
-    <link rel="preload" as="font" href="https://fonts.gstatic.com/s/roboto/v30/KFOkCnqEu92Fr1MmgVxFIzIXKMnyrYk.woff2"
-        type="font/woff2" crossorigin>
 
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/large.css" media="(min-width: 768px)">
@@ -47,143 +40,151 @@
         </nav>
     </header>
 
-    <main class="form-container">
-        <section class="form-section">
-            <h1>Chamber Membership Application</h1>
-            <p>Please fill out the form below to begin your application process.</p>
+    <main>
+        <h1 class="page-title">Chamber Membership Application</h1>
 
-            <form method="get" action="thankyou.html">
-                <label title="Applicant's First Name">
-                    First Name *
-                    <input type="text" name="firstName" autocomplete="given-name" required>
-                </label>
+        <div class="form-container">
+            <section class="form-section">
+                <form method="get" action="thankyou.html">
+                    <label>
+                        First Name
+                        <input type="text" name="firstName" autocomplete="given-name"
+                            title="Please enter your first name using letters only" required>
+                    </label>
 
-                <label title="Applicant's Last Name">
-                    Last Name *
-                    <input type="text" name="lastName" autocomplete="family-name" required>
-                </label>
+                    <label>
+                        Last Name
+                        <input type="text" name="lastName" autocomplete="family-name"
+                            title="Please enter your last name using letters only" required>
+                    </label>
 
-                <label title="Applicant's Organizational Title">
-                    Title / Position
-                    <input type="text" name="orgTitle" autocomplete="organization-title" pattern="[A-Za-z\\s\\-]{7,}"
-                        title="Minimum of 7 characters. Only alphabetical letters, spaces, and hyphens are accepted.">
-                </label>
+                    <label>
+                        Organizational Title
+                        <input type="text" name="title" autocomplete="organization-title"
+                            title="Minimum 7 characters. Only alphabetical letters, spaces, or hyphens allowed"
+                            pattern="[A-Za-z\s\-]{7,}">
+                    </label>
 
-                <label title="Applicant's Email Address">
-                    Email *
-                    <input type="email" name="email" autocomplete="email" required placeholder="example@domain.com">
-                </label>
+                    <label>
+                        Email Address
+                        <input type="email" name="email" autocomplete="email" placeholder="example@domain.com"
+                            title="Please enter a valid electronic email address" required>
+                    </label>
 
-                <label title="Applicant's Mobile Phone Number">
-                    Mobile Phone *
-                    <input type="tel" name="phone" autocomplete="tel" required>
-                </label>
+                    <label>
+                        Mobile Phone Number
+                        <input type="tel" name="phone" autocomplete="tel" title="Please enter your mobile phone number"
+                            required>
+                    </label>
 
-                <label title="Business or Organization Name">
-                    Business / Organization Name *
-                    <input type="text" name="organization" autocomplete="organization" required>
-                </label>
+                    <label>
+                        Business / Organization Name
+                        <input type="text" name="organization" autocomplete="organization"
+                            title="Please enter your business or corporate entity name" required>
+                    </label>
 
-                <label title="Membership Level Selection">
-                    Membership Level *
-                    <select name="membershipLevel" required>
-                        <option value="" disabled selected>-- Select a Membership Level --</option>
-                        <option value="np">NP Membership (Non-Profit - No Fee)</option>
-                        <option value="bronze">Bronze Membership</option>
-                        <option value="silver">Silver Membership</option>
-                        <option value="gold">Gold Membership</option>
-                    </select>
-                </label>
+                    <label>
+                        Membership Level
+                        <select name="membershipLevel" title="Select a membership level tier to view benefits and costs"
+                            required>
+                            <option value="" disabled selected>-- Choose your membership level --</option>
+                            <option value="np">NP Membership (Non-Profit - No Fee)</option>
+                            <option value="bronze">Bronze Membership</option>
+                            <option value="silver">Silver Membership</option>
+                            <option value="gold">Gold Membership</option>
+                        </select>
+                    </label>
 
-                <label title="Business or Organization Description">
-                    Business Description
-                    <textarea name="description" rows="4"></textarea>
-                </label>
+                    <label>
+                        Business Description
+                        <textarea name="description" rows="4"
+                            title="Provide a brief description of your organization's mission and marketplace activities"></textarea>
+                    </label>
 
-                <input type="hidden" name="timestamp" id="formTimestamp">
+                    <input type="hidden" name="timestamp" id="formTimestamp">
 
-                <input type="submit" value="Submit Application" class="submit-btn">
-            </form>
-        </section>
+                    <button type="submit" class="submit-btn">Submit Application</button>
+                </form>
+            </section>
 
-        <section class="cards-section">
-            <h2>Membership Levels & Benefits</h2>
+            <section class="cards-section">
+                <h2>Membership Level Benefits</h2>
 
-            <div class="membership-card np-card">
-                <h3>NP Membership</h3>
-                <button type="button" class="modal-open-btn" data-modal="np-modal">View Benefits</button>
+                <div class="membership-card bronze-tier">
+                    <h3>NP Membership</h3>
+                    <button type="button" class="modal-open-btn" data-modal="modal-np">Learn More</button>
+                </div>
+
+                <div class="membership-card bronze-tier">
+                    <h3>Bronze Membership</h3>
+                    <button type="button" class="modal-open-btn" data-modal="modal-bronze">Learn More</button>
+                </div>
+
+                <div class="membership-card silver-tier">
+                    <h3>Silver Membership</h3>
+                    <button type="button" class="modal-open-btn" data-modal="modal-silver">Learn More</button>
+                </div>
+
+                <div class="membership-card gold-tier">
+                    <h3>Gold Membership</h3>
+                    <button type="button" class="modal-open-btn" data-modal="modal-gold">Learn More</button>
+                </div>
+            </section>
+        </div>
+
+        <dialog id="modal-np" class="membership-modal">
+            <div class="modal-content">
+                <h2>NP Membership Benefits</h2>
+                <p><strong>Cost:</strong> Free / $0 Annually</p>
+                <ul>
+                    <li>Designed exclusively for certified non-profit and humanitarian organizations.</li>
+                    <li>Access to base corporate networking events.</li>
+                    <li>Standard directory listing placeholder index.</li>
+                </ul>
+                <button type="button" class="modal-close-btn">Close Details</button>
             </div>
+        </dialog>
 
-            <div class="membership-card bronze-card">
-                <h3>Bronze Membership</h3>
-                <button type="button" class="modal-open-btn" data-modal="bronze-modal">View Benefits</button>
+        <dialog id="modal-bronze" class="membership-modal">
+            <div class="modal-content">
+                <h2>Bronze Membership Benefits</h2>
+                <p><strong>Cost:</strong> $150 Annually</p>
+                <ul>
+                    <li>Standard business network membership directory listing.</li>
+                    <li>Access to monthly skill training seminars.</li>
+                    <li>General chamber publication features and updates.</li>
+                </ul>
+                <button type="button" class="modal-close-btn">Close Details</button>
             </div>
+        </dialog>
 
-            <div class="membership-card silver-card">
-                <h3>Silver Membership</h3>
-                <button type="button" class="modal-open-btn" data-modal="silver-modal">View Benefits</button>
+        <dialog id="modal-silver" class="membership-modal">
+            <div class="modal-content">
+                <h2>Silver Membership Benefits</h2>
+                <p><strong>Cost:</strong> $300 Annually</p>
+                <ul>
+                    <li>Advanced listing placement inside the member index layout.</li>
+                    <li>Shared rotation spotlight features on the chamber home screen banner.</li>
+                    <li>15% discount on municipal event rentals and meeting space bookings.</li>
+                </ul>
+                <button type="button" class="modal-close-btn">Close Details</button>
             </div>
+        </dialog>
 
-            <div class="membership-card gold-card">
-                <h3>Gold Membership</h3>
-                <button type="button" class="modal-open-btn" data-modal="gold-modal">View Benefits</button>
+        <dialog id="modal-gold" class="membership-modal">
+            <div class="modal-content">
+                <h2>Gold Membership Benefits</h2>
+                <p><strong>Cost:</strong> $500 Annually</p>
+                <ul>
+                    <li>Top-tier permanent listing position flags in search queries.</li>
+                    <li>Dedicated premium multi-image home screen business spotlight showcase cards.</li>
+                    <li>Unlimited free VIP admission passes to all regional chamber networking summits.</li>
+                    <li>Complimentary quarterly marketing consultation sessions.</li>
+                </ul>
+                <button type="button" class="modal-close-btn">Close Details</button>
             </div>
-        </section>
+        </dialog>
     </main>
-
-    <dialog id="np-modal" class="membership-modal">
-        <div class="modal-content">
-            <h2>NP Membership</h2>
-            <p><strong>Cost:</strong> Free (Exclusively for Non-Profit Organizations)</p>
-            <ul>
-                <li>Basic directory listing.</li>
-                <li>Access to community training workshops.</li>
-                <li>Quarterly networking opportunities.</li>
-            </ul>
-            <button type="button" class="modal-close-btn">Close</button>
-        </div>
-    </dialog>
-
-    <dialog id="bronze-modal" class="membership-modal">
-        <div class="modal-content">
-            <h2>Bronze Membership</h2>
-            <p><strong>Cost:</strong> Regular annual tier</p>
-            <ul>
-                <li>Standard directory listing.</li>
-                <li>Access to all chamber networking mixers.</li>
-                <li>10% discount on local event entries.</li>
-            </ul>
-            <button type="button" class="modal-close-btn">Close</button>
-        </div>
-    </dialog>
-
-    <dialog id="silver-modal" class="membership-modal">
-        <div class="modal-content">
-            <h2>Silver Membership</h2>
-            <p><strong>Cost:</strong> Mid-tier corporate value</p>
-            <ul>
-                <li>Enhanced directory listing with social cross-links.</li>
-                <li>20% discount on chamber advertising spots.</li>
-                <li>Free entrance to 2 premium tech summits per year.</li>
-                <li>Shared banner space on secondary site layouts.</li>
-            </ul>
-            <button type="button" class="modal-close-btn">Close</button>
-        </div>
-    </dialog>
-
-    <dialog id="gold-modal" class="membership-modal">
-        <div class="modal-content">
-            <h2>Gold Membership</h2>
-            <p><strong>Cost:</strong> Premier corporate tier</p>
-            <ul>
-                <li>Top position priority on directory indexing.</li>
-                <li>Free entry to all standard and premium trade events.</li>
-                <li>Dedicated Home Page business spotlight visibility.</li>
-                <li>Custom company profile feature in the regional bulletin.</li>
-            </ul>
-            <button type="button" class="modal-close-btn">Close</button>
-        </div>
-    </dialog>
 
     <footer>
         <p>Contact: engnama@byupathway.edu | +228 71 53 46 67</p>
