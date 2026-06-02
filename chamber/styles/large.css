@@ -95,3 +95,125 @@ main .cards-section {
     transform: translateY(-4px);
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
 }
+
+/* ==========================================================================
+   LARGE SCREEN ENHANCEMENTS (Desktop & Tablet) Discover page
+   ========================================================================== */
+
+/* 1. HEADER & FOOTER */
+body header,
+body footer {
+    padding: 2rem 5%;
+}
+
+/* 2. NAVIGATION */
+body nav ul {
+    justify-content: flex-end;
+    padding-right: 2rem;
+}
+
+/* 3. DIRECTORY - GRID VIEW */
+main .members.grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+/* 4. DIRECTORY - LIST VIEW */
+main .members.list .member-card {
+    display: grid;
+    grid-template-columns: 2fr 1fr minmax(auto, max-content);
+    gap: 2.5rem;
+    padding: 1.5rem 2rem;
+}
+
+/* 5. INTERACTION & ANIMATIONS */
+main .member-card {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* 6. HOME PAGE LAYOUT (.home-grid) */
+main .home-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    padding: 2rem 1rem;
+}
+
+body .hero-image {
+    aspect-ratio: 21 / 9;
+}
+
+body .cta-box {
+    top: 50%;
+    bottom: auto;
+    left: 5%;
+    right: auto;
+    transform: translateY(-50%);
+    max-width: 450px;
+    background-color: rgba(0, 51, 85, 0.85);
+    padding: 2rem;
+    text-align: left;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+.cta-box h1.cta-title,
+body .cta-box h1 {
+    font-size: 2rem;
+    margin: 0 0 0.75rem 0;
+}
+
+.cta-box p.cta-desc,
+body .cta-box p {
+    font-size: 1.05rem;
+}
+
+body .cta-button {
+    margin-top: 1.25rem;
+    padding: 0.75rem 1.5rem;
+}
+
+body .spotlight-card {
+    margin-bottom: 0;
+}
+
+/*7. JOIN FORM DESKTOP SPLIT-GRID LAYOUT*/
+main .form-container {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 3rem;
+    align-items: start;
+    padding: 2rem 1rem;
+}
+
+main .cards-section {
+    position: sticky;
+    top: 25px;
+}
+
+.membership-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* ==========================================================================
+   DISCOVER PAGE - IMAGE HOVER EFFECT (Desktop only)
+   ========================================================================== */
+.discover-card figure {
+    overflow: hidden;
+    margin: 0 auto 1rem auto;
+    padding: 0;
+    border-radius: 4px;
+    width: 100%;
+    display: block;
+}
+
+.discover-card figure img {
+    transition: transform 0.3s ease;
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.discover-card:hover figure img {
+    transform: scale(1.05);
+}

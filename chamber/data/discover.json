@@ -1,0 +1,58 @@
+[
+    {
+        "id": 1,
+        "name": "Grand Marché de Lomé",
+        "image": "images/marche.webp",
+        "address": "Rue du Commerce, Lomé",
+        "description": "The vibrant commercial heart of the capital, famous for its colorful Wax fabrics and the unique dynamism of its local traders."
+    },
+    {
+        "id": 2,
+        "name": "Lomé Beach",
+        "image": "images/plage.webp",
+        "address": "Boulevard du Mono, Lomé",
+        "description": "A magnificent and vast stretch of fine sand lined with coconut trees, ideal for scenic walks along the Atlantic Ocean coast."
+    },
+    {
+        "id": 3,
+        "name": "Independence Monument",
+        "image": "images/independance.webp",
+        "address": "Avenue de la Libération, Lomé",
+        "description": "A major historical and cultural landmark of the Togolese nation, surrounded by beautifully landscaped gardens in the city center."
+    },
+    {
+        "id": 4,
+        "name": "Lomé Artisanal Village",
+        "image": "images/artisanal.webp",
+        "address": "Avenue de Pya, Lomé",
+        "description": "The premier center for discovering authentic Togolese arts and crafts, featuring wood carvings, batik fabrics, pottery, and handmade jewelry."
+    },
+    {
+        "id": 5,
+        "name": "Palais de Lomé",
+        "image": "images/palais.webp",
+        "address": "Avenue de la Marina, Lomé",
+        "description": "A fully restored former governors' palace, beautifully transformed into a prestigious center for contemporary art and culture."
+    },
+    {
+        "id": 6,
+        "name": "National Museum of Togo",
+        "image": "images/musee.webp",
+        "address": "Place de l'Indépendance, Lomé",
+        "description": "An essential cultural venue housing rich ethnographic collections, traditional musical instruments, and ancient pottery."
+    },
+    {
+        "id": 7,
+        "name": "Autonomous Port of Lomé",
+        "image": "images/port.webp",
+        "address": "Zone Industrielle, Lomé",
+        "description": "The only natural deepwater port in the region, serving as a vital economic engine and a major logistics hub for West Africa."
+    },
+    {
+        "id": 8,
+        "name": "Sacred Heart Cathedral",
+        "image": "images/cathedrale.webp",
+        "address": "Rue de la Cathédrale, Lomé",
+        "description": "An architectural masterpiece designed in the German Gothic style, built at the turn of the 20th century in downtown Lomé."
+    }
+]

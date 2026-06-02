@@ -5,17 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Chamber of Commerce Directory - Lomé</title>
+    <title>Chamber of Commerce - Discover Lomé</title>
 
     <meta name="description"
-        content="Browse the Chamber of Commerce Directory to discover local businesses and partners in Lomé, Togo.">
+        content="Explore the demographic benefits, cultural landmarks, and business attractions of Lomé, Togo. Perfect for visitors and future Chamber members.">
     <meta name="author" content="Guillaume Essodong N'GNAMA">
 
-    <meta property="og:title" content="Chamber of Commerce Business Directory - Lomé">
+    <meta property="og:title" content="Discover Lomé - Features & Demographics">
     <meta property="og:description"
-        content="Explore local businesses and services in Lomé. Connect with our community partners today.">
+        content="Factual and representative insights into Lomé's highlights, infrastructure, and community features.">
     <meta property="og:image" content="https://essodong-pro.github.io/wdd231/chamber/images/social-preview.webp">
-    <meta property="og:url" content="https://essodong-pro.github.io/wdd231/chamber/directory.html">
+    <meta property="og:url" content="https://essodong-pro.github.io/wdd231/chamber/discover.html">
     <meta property="og:type" content="website">
 
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
@@ -27,13 +27,13 @@
     <link rel="preload" as="font" href="https://fonts.gstatic.com/s/roboto/v30/KFOkCnqEu92Fr1MmgVxFIzIXKMnyrYk.woff2"
         type="font/woff2" crossorigin>
 
-    <link rel="preload" as="image" href="images/onet.webp" fetchpriority="high">
-
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/large.css" media="(min-width: 768px)">
 
-    <script src="scripts/directory.js" defer></script>
+    <script src="scripts/main.js" defer></script>
     <script src="scripts/date.js" defer></script>
+
+    <script src="scripts/discover.js" type="module" defer></script>
 </head>
 
 <body>
@@ -41,21 +41,25 @@
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="directory.html" class="active">Directory</a></li>
-                <li><a href="discover.html" >Discover</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="discover.html" class="active">Discover</a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
-        <h1>Chamber Directory</h1>
+    <main class="discover-grid-container">
+        <div id="visitor-message" class="visitor-banner"></div>
 
-        <div class="view-buttons">
-            <button id="grid" aria-label="Grid View">Grid View</button>
-            <button id="list" aria-label="List View">List View</button>
-        </div>
+        <aside class="demographics-sidebar">
+            <h2>Lomé Demographics</h2>
+            <p><strong>Country:</strong> Togo</p>
+            <p><strong>Region:</strong> Maritime (Capital Hub)</p>
+            <p><strong>Population:</strong> ~2.2 Million inhabitants</p>
+            <p><strong>Currency:</strong> CFA Franc (XOF)</p>
+            <p><strong>Key Infrastructure:</strong> Autonomous Port of Lomé (Deepwater hub)</p>
+        </aside>
 
-        <section class="members"></section>
+        <div id="discover-grid" class="discover-cards-wrapper"></div>
     </main>
 
     <footer>
