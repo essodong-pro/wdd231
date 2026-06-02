@@ -14,7 +14,7 @@
 
 @font-face {
     font-family: 'Roboto-Fallback';
-    src: local('Arial');
+    src: local('Arial'), local('Helvetica');
     ascent-override: 93%;
     descent-override: 24%;
     line-gap-override: 0%;
@@ -22,7 +22,7 @@
 }
 
 body {
-    font-family: 'Roboto', 'Roboto-Fallback', system-ui, -apple-system, sans-serif;
+    font-family: 'Roboto', 'Roboto-Fallback', Arial, system-ui, -apple-system, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f5f7fa;
@@ -692,6 +692,7 @@ hr {
     margin: 0 auto;
 }
 
+/* Fixed CLS: Establish specific initial height and flex parameters to preserve empty space */
 .visitor-banner {
     grid-area: visitor-banner;
     background-color: #ffffff;
@@ -702,7 +703,17 @@ hr {
     color: #003355;
     border-radius: 4px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-    min-height: 1.5rem;
+    min-height: 58px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Avoid empty banner artifacts from causing shifts when script evaluates */
+.visitor-banner:empty {
+    background-color: #ffffff;
+    border-left: 5px solid transparent;
 }
 
 .demographics-sidebar {
@@ -733,6 +744,7 @@ hr {
     border-bottom: none;
 }
 
+/* Fixed CLS: Provide base containment structure before script compilation loads cards */
 .discover-cards-wrapper {
     grid-area: cards-panel;
     display: grid;
@@ -741,6 +753,7 @@ hr {
         "cardArea1" "cardArea2" "cardArea3" "cardArea4"
         "cardArea5" "cardArea6" "cardArea7" "cardArea8";
     gap: 1.5rem;
+    min-height: 400px;
 }
 
 .area-card1 {
