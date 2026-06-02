@@ -1,7 +1,17 @@
-
 /* ==========================================================================
    1. RESET, FONTS & BASE
    ========================================================================== */
+:root {
+    --primary-color: #005580;
+    --primary-dark: #003355;
+    --primary-light: #004466;
+    --accent-color: #ffcc00;
+    --text-color: #333333;
+    --text-light: #555555;
+    --bg-light: #f5f7fa;
+    --bg-white: #ffffff;
+}
+
 @font-face {
     font-family: 'Roboto-Fallback';
     src: local('Arial');
