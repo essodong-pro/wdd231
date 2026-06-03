@@ -1,5 +1,7 @@
 
-/* 1. Global Variables & Color Theme */
+/* ==========================================================================
+   1. Global Variables & Color Theme
+   ========================================================================== */
 :root {
     --primary-color: #A62424;
     /* Brick Red / Traditional Terracotta */
@@ -16,8 +18,8 @@
     --gray-dark: #555555;
 
     /* Typography */
-    --font-heading: 'Helvetica Neue', Arial, sans-serif;
-    --font-body: Georgia, serif;
+    --font-heading: 'Playfair Display', 'Helvetica Neue', Arial, sans-serif;
+    --font-body: 'Roboto', Georgia, serif;
     /* Elegant editorial style */
 
     /* Transitions and Shadows */
@@ -25,7 +27,9 @@
     --shadow-subtle: 0 4px 6px rgba(0, 0, 0, 0.05);
 }
 
-/* 2. Basic Reset */
+/* ==========================================================================
+   2. Basic Reset
+   ========================================================================== */
 * {
     margin: 0;
     padding: 0;
@@ -46,7 +50,9 @@ main {
     flex: 1;
 }
 
-/* 3. Header & Logo Area */
+/* ==========================================================================
+   3. Header & Logo Area
+   ========================================================================== */
 header {
     background-color: var(--white);
     box-shadow: var(--shadow-subtle);
@@ -76,7 +82,9 @@ header {
     object-fit: cover;
 }
 
-/* 4. Mobile Hamburger Menu Button */
+/* ==========================================================================
+   4. Mobile Hamburger Menu Button
+   ========================================================================== */
 #menu-button {
     display: block;
     /* Visible on mobile by default */
@@ -131,7 +139,9 @@ header {
     transform: rotate(-45deg);
 }
 
-/* 5. Mobile Navigation  */
+/* ==========================================================================
+   5. Mobile Navigation  
+   ========================================================================== */
 #main-nav {
     display: none;
     position: absolute;
@@ -169,40 +179,48 @@ header {
     color: var(--primary-color);
 }
 
-/* 6. Hero Section & Index Common Content */
+/* ==========================================================================
+   6. Hero Section & Index Common Content
+   ========================================================================== */
 .hero-banner {
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../images/ewe-kente.webp') center/cover no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('../images/ewe-kente.webp') center/cover no-repeat;
     color: var(--white);
     padding: 4rem 1.5rem;
     text-align: center;
 }
 
+.hero-content h1,
 .hero-content h2 {
     font-family: var(--font-heading);
     font-size: 1.8rem;
     margin-bottom: 1rem;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.85);
 }
 
 .hero-content p {
     font-size: 1.1rem;
     max-width: 600px;
     margin: 0 auto 2rem auto;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
 }
 
 .cta-button {
     display: inline-block;
     background-color: var(--accent-color);
-    color: var(--white);
+    color: #111111;
     padding: 0.8rem 1.8rem;
     font-family: var(--font-heading);
     font-weight: bold;
     text-decoration: none;
     border-radius: 4px;
-    transition: transform 0.2s, background-color 0.2s;
+    transition: transform 0.2s var(--transition-smooth),
+        background-color 0.2s var(--transition-smooth),
+        color 0.2s var(--transition-smooth);
 }
 
 .cta-button:hover {
     background-color: #be7b03;
+    color: var(--white);
     transform: translateY(-2px);
 }
 
@@ -280,7 +298,9 @@ header {
     text-decoration: none;
 }
 
-/* 7. Footer */
+/* ==========================================================================
+   7. Footer
+   ========================================================================== */
 footer {
     background-color: #1a1a1a;
     color: #cccccc;
@@ -313,7 +333,9 @@ footer span {
     color: var(--white);
 }
 
-/* 8. LARGE SCREENS (Horizontal Layout / Desktop Version) */
+/* ==========================================================================
+   8. LARGE SCREENS (Horizontal Layout / Desktop Version)
+   ========================================================================== */
 @media (min-width: 768px) {
     header {
         padding: 1rem 3rem;
@@ -348,6 +370,7 @@ footer span {
         padding: 7rem 2rem;
     }
 
+    .hero-content h1,
     .hero-content h2 {
         font-size: 2.8rem;
     }
