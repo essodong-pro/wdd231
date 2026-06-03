@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 
 <head>
     <meta charset="UTF-8">
@@ -10,36 +10,56 @@
         content="Resource attributions and project documentation for Sika Togo, detailing all 15 media assets, text content definitions, and external citations used.">
     <meta name="author" content="Essodong N'GNAMA">
 
-    <!-- Style Sheets -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="images/logo.webp" type="image/webp">
+
+    <meta property="og:title" content="Resource Attributions | Sika Togo">
+    <meta property="og:description"
+        content="Resource attributions and project documentation for Sika Togo, detailing all media assets and content citations.">
+    <meta property="og:image" content="https://essodong-pro.github.io/wdd231/finalproject/images/logo.webp">
+    <meta property="og:url" content="https://essodong-pro.github.io/wdd231/finalproject/attributions.html">
+    <meta property="og:type" content="website">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap"
+        rel="stylesheet">
+
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/components.css">
+
+    <script src="scripts/main.js" defer></script>
 </head>
 
 <body>
 
-    <!-- Site Header -->
     <header>
-        <div class="logo-area">
-            <img src="images/logo.webp" alt="Togo Art and Culture Logo" width="60" height="60" class="logo">
-            <h1>Sika Togo</h1>
+        <div class="header-container">
+            <div class="logo-area">
+                <img src="images/logo.webp" alt="Togo Art and Culture Logo" width="60" height="60" class="logo">
+                <span class="logo-title">Sika Togo</span>
+            </div>
+            <button id="menu-button" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span class="hamburger-icon"></span>
+            </button>
+            <nav id="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="gallery.html">Gallery &amp; Art</a></li>
+                    <li><a href="traditions.html">Traditions &amp; Contact</a></li>
+                </ul>
+            </nav>
         </div>
-        <nav id="main-nav">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="gallery.html">Gallery & Art</a></li>
-                <li><a href="traditions.html">Traditions & Contact</a></li>
-            </ul>
-        </nav>
     </header>
 
-    <!-- Main Content Layout -->
     <main class="attributions-container">
-        <h2>Resource Attributions</h2>
+        <h1>Resource Attributions</h1>
         <p>This page documents the external image assets, text content definitions, and inspiration utilized across the
             development of the Sika Togo cultural project platform.</p>
 
         <section class="attribution-group">
-            <h3>1. Gallery Media Assets (15 Items)</h3>
+            <h2>1. Gallery Media Assets (15 Items)</h2>
             <ul>
                 <li><strong>Ewe Kente Cloth (ewe-kente.webp):</strong> Visual representation referenced from traditional
                     West African textile heritage public domains and historic artisanal weaving archives.</li>
@@ -78,7 +98,7 @@
         </section>
 
         <section class="attribution-group">
-            <h3>2. Text Content and Curated Copy</h3>
+            <h2>2. Text Content and Curated Copy</h2>
             <ul>
                 <li>
                     <strong>Inspirational Quote:</strong>
@@ -95,7 +115,7 @@
         </section>
 
         <section class="attribution-group">
-            <h3>3. Tool Attributions</h3>
+            <h2>3. Tool Attributions</h2>
             <ul>
                 <li><strong>Screen Recording:</strong> Screen capture, audio capture, and face-cam video demonstration
                     recorded utilizing <a href="https://www.loom.com" target="_blank" rel="noopener">Loom Video
@@ -106,13 +126,14 @@
         </section>
     </main>
 
-    <!-- Footer -->
     <footer>
-        <p>&copy; <span id="current-year"></span> | WDD231 Final Project | Essodong N'GNAMA</p>
-        <p>Last Modified: <span id="last-modified"></span></p>
-        <div class="footer-links">
-            <a href="attributions.html" class="active">Resource Attributions</a> |
-            <a href="https://www.loom.com" target="_blank" rel="noopener">Project Video Demonstration</a>
+        <div class="footer-container">
+            <p>&copy; <span id="current-year"></span> | WDD231 Final Project | Essodong N'GNAMA</p>
+            <p>Last Modified: <span id="last-modified"></span></p>
+            <div class="footer-links">
+                <a href="attributions.html" class="active">Resource Attributions</a> |
+                <a href="https://www.loom.com" target="_blank" rel="noopener">Project Video Demonstration</a>
+            </div>
         </div>
     </footer>
 
