@@ -1,7 +1,3 @@
-
-/* ==========================================================================
-   1. Control Buttons and Category Filters
-   ========================================================================== */
 .gallery-intro {
     text-align: center;
     padding: 3rem 1.5rem 1.5rem 1.5rem;
@@ -33,7 +29,6 @@
     font-size: 0.9rem;
     border-radius: 20px;
     cursor: pointer;
-    /* PERFORMANCE FIX: Targeted transitions avoid layout/paint shifting and fix non-composited alerts */
     transition: background-color 0.25s var(--transition-smooth),
         border-color 0.25s var(--transition-smooth),
         color 0.25s var(--transition-smooth),
@@ -52,18 +47,15 @@
     box-shadow: 0 4px 10px rgba(166, 36, 36, 0.2);
 }
 
-/* Custom Header & Logo Title Overrides  */
 .logo-area .logo-title {
     font-family: var(--font-heading);
-    font-size: 1.75rem;
+    font-size: 1.4rem;
     font-weight: 700;
     color: var(--primary-color);
+    letter-spacing: 1px;
     margin: 0;
 }
 
-/* ==========================================================================
-   2. Cultural Cards Grid (Responsive & Mobile-First)
-   ========================================================================== */
 .cards-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -88,7 +80,6 @@
     color: var(--primary-color);
 }
 
-/* Clickable individual card design */
 .culture-card {
     background-color: var(--white);
     border-radius: 8px;
@@ -187,41 +178,40 @@
     color: var(--white);
 }
 
-/* Hero Content Typography & Layer Contrast Fixes */
-.hero-content h1,
-.hero-content h2 {
+.hero-content h1 {
     font-family: var(--font-heading);
-    color: #ffffff !important;
-    font-size: 2.5rem;
+    color: #ffffff;
+    font-size: 1.8rem;
     margin-bottom: 1rem;
-    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.85),
-        -1px -1px 0px rgba(0, 0, 0, 0.4);
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.9);
 }
 
-/* Call to Action Button Contrast Fix */
+@media (min-width: 768px) {
+    .hero-content h1 {
+        font-size: 2.8rem;
+    }
+}
+
 .cta-button {
     display: inline-block;
     background-color: var(--accent-color);
-    /* Gold color */
     color: #111111;
-    padding: 0.75rem 1.5rem;
+    padding: 0.8rem 1.8rem;
     font-family: var(--font-heading);
-    font-weight: 700;
+    font-weight: bold;
     text-decoration: none;
     border-radius: 4px;
-    box-shadow: var(--shadow-subtle);
-    transition: background-color 0.2s var(--transition-smooth),
+    transition: transform 0.2s var(--transition-smooth),
+        background-color 0.2s var(--transition-smooth),
         color 0.2s var(--transition-smooth);
 }
 
 .cta-button:hover {
     background-color: #be7b03;
     color: var(--white);
+    transform: translateY(-2px);
 }
 
-/* ==========================================================================
-   3. Accessible Modal Window (<dialog>)
-   ========================================================================== */
 #culture-modal {
     border: none;
     border-radius: 12px;
@@ -233,7 +223,6 @@
     overflow: hidden;
 }
 
-/* Native background dimming for the <dialog> tag */
 #culture-modal::backdrop {
     background: rgba(0, 0, 0, 0.75);
     backdrop-filter: blur(4px);
@@ -306,7 +295,6 @@
     border-radius: 0 4px 4px 0;
 }
 
-/* Modal adjustments for larger screens */
 @media (min-width: 600px) {
     .modal-body-layout {
         display: grid;
@@ -318,9 +306,6 @@
     }
 }
 
-/* ==========================================================================
-   4. Academic Registration Form
-   ========================================================================== */
 .form-section {
     max-width: 650px;
     margin: 2rem auto;
@@ -423,9 +408,6 @@
     background-color: #132e15;
 }
 
-/* ==========================================================================
-   5. Isolated Resource Attributions Layout
-   ========================================================================== */
 .attributions-container {
     max-width: 900px;
     margin: 2rem auto;
@@ -448,7 +430,7 @@
 }
 
 .attribution-group {
-    background-color: var(--white, #ffffff);
+    background-color: var(--white);
     border: 1px solid #e2d9cf;
     border-radius: 6px;
     padding: 1.5rem;
