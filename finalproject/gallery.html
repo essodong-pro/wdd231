@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Art & Culture Gallery | Sika Togo</title>
+
+    <meta name="description"
+        content="Explore the Togolese art gallery curated by Essodong N'GNAMA. Discover 15 unique cultural treasures of Togo, including Kente textiles, traditional sculptures, and contemporary paintings.">
+    <meta name="author" content="Essodong N'GNAMA">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+    <meta property="og:title" content="Togolese Art & Culture Gallery | Sika Togo">
+    <meta property="og:type" content="website">
+    <meta property="og:description"
+        content="A digital exhibition of Togolese craftsmanship, traditions, and pictorial masterpieces compiled by Essodong N'GNAMA.">
+    <meta property="og:image" content="images/ewe-kente.webp">
+    <meta property="og:url" content="https://your-username.github.io/wdd231/finalproject/gallery.html">
+
+    <link rel="preload" href="data/culture.json" as="fetch" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="styles/base.css">
+
+    <link rel="stylesheet" href="styles/components.css">
+
+    <script type="module" src="scripts/main.js"></script>
+    <script type="module" src="scripts/gallery-app.js"></script>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo-area">
+            <img src="images/logo.webp" alt="Togo Art and Culture Logo" width="60" height="60" class="logo">
+            <h1>Sika Togo</h1>
+        </div>
+
+        <button id="menu-button" aria-label="Open navigation menu" aria-expanded="false">
+            <span class="hamburger-icon"></span>
+        </button>
+        <nav id="main-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="gallery.html" class="active">Gallery & Art</a></li>
+                <li><a href="traditions.html">Traditions & Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="gallery-intro">
+            <h2>The Visual Treasures of Togo</h2>
+            <p>Explore our carefully documented collection highlighting Togolese craftsmanship, rituals, and
+                contemporary creations. Click on any card to reveal the deep history and cultural significance
+                behind each work of art.</p>
+
+            <div class="filter-controls">
+                <button class="filter-btn active" data-category="all">View All</button>
+                <button class="filter-btn" data-category="Artisanat">Crafts</button>
+                <button class="filter-btn" data-category="Festivals">Festivals</button>
+                <button class="filter-btn" data-category="Art & Peinture">Art & Painting</button>
+                <button class="filter-btn" data-category="Traditions">Traditions</button>
+            </div>
+        </section>
+
+        <section id="gallery-grid" class="cards-grid">
+            <p class="loading-placeholder">Loading cultural masterpieces...</p>
+        </section>
+
+        <dialog id="culture-modal">
+            <div class="modal-content">
+                <button id="close-modal" aria-label="Close window">&times;</button>
+                <div id="modal-details">
+                </div>
+            </div>
+        </dialog>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="current-year"></span> | WDD231 Final Project | Essodong N'GNAMA</p>
+        <p>Last Modified: <span id="last-modified"></span></p>
+        <div class="footer-links">
+            <a href="attributions.html">Resource Attributions</a> |
+            <a href="https://youtube.com" target="_blank" rel="noopener">Project Video Demonstration</a>
+        </div>
+    </footer>
+
+</body>
+
+</html>

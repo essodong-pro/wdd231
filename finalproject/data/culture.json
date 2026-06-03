@@ -1,0 +1,138 @@
+
+[
+    {
+        "id": "ewe-kente",
+        "name": "Ewe Kente Cloth",
+        "category": "Artisanat",
+        "region": "Maritime / Greater Kloto",
+        "description": "A highly rich traditional fabric, hand-woven with intricate geometric patterns.",
+        "imageUrl": "images/ewe-kente.webp",
+        "details": "Each pattern and color holds a specific meaning: yellow symbolizes wealth and fertility, green represents spiritual growth, and red honors the memory of the ancestors."
+    },
+    {
+        "id": "epe-ekpe",
+        "name": "Épé-Ékpé Festival",
+        "category": "Festivals",
+        "region": "Aného (Maritime)",
+        "description": "The major traditional festival of the Guin people, marked by the retrieving of the sacred stone (Kpessosso).",
+        "imageUrl": "images/epe-ekpe.webp",
+        "details": "The color of the sacred stone found by the Voodoo priests predicts the destiny (good harvest, rain, peace, or hardships) for the new year."
+    },
+    {
+        "id": "tamberma-architecture",
+        "name": "The Tata Somba (Koutammoukou)",
+        "category": "Architecture & Art",
+        "region": "Kara (North)",
+        "description": "Miniature fortresses made of red earth, unique in the world and classified as a UNESCO World Heritage site.",
+        "imageUrl": "images/tatas-tamberma.webp",
+        "details": "These multi-story earthen houses symbolize the harmony between humanity and nature, originally designed to defend against historical invasions."
+    },
+    {
+        "id": "akodessewa-crafts",
+        "name": "Akodésséwa Craftsmanship",
+        "category": "Artisanat",
+        "region": "Lomé (Maritime)",
+        "description": "Carved objects, amulets, and ritual statuettes from the famous fetish market.",
+        "imageUrl": "images/akodessewa.webp",
+        "details": "Beyond the mystical aspect, these objects represent a deep expertise in wood carving and ironwork passed down from generation to generation."
+    },
+    {
+        "id": "kloto-pottery",
+        "name": "Kloto Pottery",
+        "category": "Artisanat",
+        "region": "Plateaux (Kpalimé)",
+        "description": "Handcrafted pottery made from local clay, often decorated with patterns inspired by nature.",
+        "imageUrl": "images/poterie-kloto.webp",
+        "details": "Women artisans use ancestral open-air firing techniques and natural plant extracts to dye the finished pieces."
+    },
+    {
+        "id": "gongon-drum",
+        "name": "The Gongon Drum",
+        "category": "Musique",
+        "region": "All Regions",
+        "description": "A traditional percussion instrument used to provide rhythms for dances and transmit community messages.",
+        "imageUrl": "images/gongon.webp",
+        "details": "Crafted from local wood and covered with a tightly stretched goatskin, it sits at the absolute heart of popular celebration ceremonies."
+    },
+    {
+        "id": "ovazu-festival",
+        "name": "Odon-Itsu Festival (Yam Festival)",
+        "category": "Festivals",
+        "region": "Plateaux (Atakpamé)",
+        "description": "A celebration of the harvest of the yam, symbolizing abundance and a spiritual offering to the ancestors.",
+        "imageUrl": "images/odon-itsu.webp",
+        "details": "This festival offers the perfect opportunity to enjoy traditional pounded yam (Foufou) and reinforce bonds of brotherhood within the community."
+    },
+    {
+        "id": "kamou-dance",
+        "name": "The Kamou Dance",
+        "category": "Traditions",
+        "region": "Kara",
+        "description": "A traditional Kabyè dance performed during initiation and harvest ceremonies.",
+        "imageUrl": "images/kamou.webp",
+        "details": "It expresses strength, solidarity, and communion with the forces of nature through highly rhythmic foot movements."
+    },
+    {
+        "id": "sokode-weaving",
+        "name": "Tem Weaving of Sokodé",
+        "category": "Artisanat",
+        "region": "Centrale",
+        "description": "Heavy and loose-fitting traditional garments, hand-woven by artisans of the Centrale region.",
+        "imageUrl": "images/tissage-tem.webp",
+        "details": "Proudly worn during major celebrations, these tunics reflect the identity, history, and prestige of the Tem culture."
+    },
+    {
+        "id": "bogolan-togo",
+        "name": "Togolese Bogolan Art",
+        "category": "Art & Peinture",
+        "region": "Savanes / Plateaux",
+        "description": "A dye technique on cotton canvas using fermented mud and plant decoctions.",
+        "imageUrl": "images/bogolan.webp",
+        "details": "Adopted and reinvented by many contemporary Togolese artists to create meaningful and socially conscious wall art."
+    },
+    {
+        "id": "togoville-history",
+        "name": "Statuary Art of Togoville",
+        "category": "Art & Peinture",
+        "region": "Maritime",
+        "description": "Historical monuments and sculptures located in the town that served as the birthplace of the country's name.",
+        "imageUrl": "images/togoville.webp",
+        "details": "The public squares house commemorative statues and shrines decorated with beautiful narrative bas-reliefs."
+    },
+    {
+        "id": "voodoo-sculpture",
+        "name": "Legba Statuettes",
+        "category": "Architecture & Art",
+        "region": "Maritime",
+        "description": "Wood or clay sculptures placed at the entrance of villages or homes for spiritual protection.",
+        "imageUrl": "images/legba.webp",
+        "details": "These sacred works of art follow precise aesthetic codes representing vigilance and the connection between spiritual worlds."
+    },
+    {
+        "id": "gbagba-dance",
+        "name": "Adewon Dance (Hunters)",
+        "category": "Traditions",
+        "region": "Maritime / Plateaux",
+        "description": "A sacred mimetic dance executed by initiates before or after a major hunt.",
+        "imageUrl": "images/adewon.webp",
+        "details": "Dancers wear animal skins and ornaments, using agile movements to narrate stories of courage in the face of nature."
+    },
+    {
+        "id": "modern-painting",
+        "name": "Contemporary Togolese Painting",
+        "category": "Art & Peinture",
+        "region": "Lomé",
+        "description": "An urban artistic movement utilizing natural pigments and recycled materials.",
+        "imageUrl": "images/peinture-moderne.webp",
+        "details": "Inspired by daily street life and ancestral traditions, this dynamic pictorial scene is now exported to major global art galleries."
+    },
+    {
+        "id": "gaza-festival",
+        "name": "Agbogbo-Za Festival",
+        "category": "Festivals",
+        "region": "Plateaux (Notsé)",
+        "description": "The largest ritual festival of the Ewe people, commemorating the historic exodus out of the walled city of Notsé.",
+        "imageUrl": "images/agbogboza.webp",
+        "details": "This festival brings the entire Ewe diaspora together around their spiritual king to celebrate unity, culture, and shared history."
+    }
+]

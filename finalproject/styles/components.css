@@ -1,0 +1,445 @@
+/* ==========================================================================
+   1. Control Buttons and Category Filters
+   ========================================================================== */
+.gallery-intro {
+    text-align: center;
+    padding: 3rem 1.5rem 1.5rem 1.5rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.gallery-intro h2 {
+    font-family: var(--font-heading);
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.filter-controls {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 1.5rem;
+}
+
+.filter-btn {
+    background-color: var(--white);
+    color: var(--text-color);
+    border: 2px solid var(--gray-light);
+    padding: 0.6rem 1.2rem;
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: 0.9rem;
+    border-radius: 20px;
+    cursor: pointer;
+    /* PERFORMANCE FIX: Targeted transitions avoid layout/paint shifting and fix non-composited alerts */
+    transition: background-color 0.25s var(--transition-smooth),
+        border-color 0.25s var(--transition-smooth),
+        color 0.25s var(--transition-smooth),
+        box-shadow 0.25s var(--transition-smooth);
+}
+
+.filter-btn:hover {
+    border-color: var(--accent-color);
+    color: var(--accent-color);
+}
+
+.filter-btn.active {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: var(--white);
+    box-shadow: 0 4px 10px rgba(166, 36, 36, 0.2);
+}
+
+/* ==========================================================================
+   2. Cultural Cards Grid (Responsive & Mobile-First)
+   ========================================================================== */
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+    padding: 2rem 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    min-height: 800px;
+}
+
+.loading-placeholder,
+.error-message,
+.no-items {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 3rem;
+    font-family: var(--font-heading);
+    font-weight: bold;
+}
+
+.error-message {
+    color: var(--primary-color);
+}
+
+/* Clickable individual card design */
+.culture-card {
+    background-color: var(--white);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: var(--shadow-subtle);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    cursor: pointer;
+    transition: transform 0.3s var(--transition-smooth), box-shadow 0.3s var(--transition-smooth);
+    display: flex;
+    flex-direction: column;
+}
+
+.culture-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.08);
+}
+
+.card-image-wrapper {
+    position: relative;
+    width: 100%;
+    padding-top: 66.66%;
+    aspect-ratio: 3 / 2;
+    background-color: var(--gray-light);
+    overflow: hidden;
+}
+
+.card-image-wrapper img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.culture-card:hover .card-image-wrapper img {
+    transform: scale(1.04);
+}
+
+.card-info {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.card-category {
+    font-family: var(--font-heading);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: var(--secondary-color);
+    letter-spacing: 1px;
+    margin-bottom: 0.5rem;
+}
+
+.card-info h3 {
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+}
+
+.card-region {
+    font-size: 0.85rem;
+    color: var(--gray-dark);
+    margin-bottom: 0.75rem;
+}
+
+.card-short-desc {
+    font-size: 0.95rem;
+    color: #444444;
+    margin-bottom: 1.5rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.view-details-btn {
+    margin-top: auto;
+    background: none;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+    padding: 0.5rem 1rem;
+    font-family: var(--font-heading);
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.culture-card:hover .view-details-btn {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+/* ==========================================================================
+   3. Accessible Modal Window (<dialog>)
+   ========================================================================== */
+#culture-modal {
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    max-width: 750px;
+    width: 90%;
+    margin: auto;
+    padding: 0;
+    overflow: hidden;
+}
+
+/* Native background dimming for the <dialog> tag */
+#culture-modal::backdrop {
+    background: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(4px);
+}
+
+.modal-content {
+    position: relative;
+    background-color: var(--bg-color);
+    padding: 2.5rem 2rem 2rem 2rem;
+}
+
+#close-modal {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: var(--gray-dark);
+    line-height: 1;
+    transition: color 0.2s;
+}
+
+#close-modal:hover {
+    color: var(--primary-color);
+}
+
+#modal-details h2 {
+    font-family: var(--font-heading);
+    color: var(--primary-color);
+    margin-bottom: 0.25rem;
+}
+
+.modal-meta {
+    font-family: var(--font-heading);
+    font-size: 0.85rem;
+    color: var(--gray-dark);
+    border-bottom: 1px solid var(--gray-light);
+    padding-bottom: 0.75rem;
+    margin-bottom: 1.5rem;
+}
+
+.modal-body-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.modal-img-large {
+    width: 100%;
+    height: auto;
+    max-height: 350px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.modal-text h3 {
+    font-family: var(--font-heading);
+    color: var(--secondary-color);
+    margin: 1rem 0 0.5rem 0;
+    font-size: 1.1rem;
+}
+
+.highlighted-details {
+    background-color: var(--white);
+    padding: 1rem;
+    border-left: 4px solid var(--accent-color);
+    font-style: italic;
+    border-radius: 0 4px 4px 0;
+}
+
+/* Modal adjustments for larger screens */
+@media (min-width: 600px) {
+    .modal-body-layout {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .modal-img-large {
+        max-height: 100%;
+    }
+}
+
+/* ==========================================================================
+   4. Academic Registration Form
+   ========================================================================== */
+.form-section {
+    max-width: 650px;
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+}
+
+.form-section h3 {
+    font-family: var(--font-heading);
+    color: var(--secondary-color);
+    font-size: 1.6rem;
+    margin-bottom: 0.5rem;
+}
+
+.cultural-form fieldset {
+    border: 1px solid #d1c7bd;
+    border-radius: 6px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    background-color: var(--white);
+}
+
+.cultural-form legend {
+    font-family: var(--font-heading);
+    font-weight: bold;
+    color: var(--primary-color);
+    padding: 0 0.5rem;
+}
+
+.cultural-form label {
+    display: block;
+    margin-top: 1rem;
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.cultural-form label:first-of-type {
+    margin-top: 0;
+}
+
+.required {
+    color: var(--primary-color);
+}
+
+.cultural-form input[type="text"],
+.cultural-form input[type="email"],
+.cultural-form select,
+.cultural-form textarea {
+    width: 100%;
+    padding: 0.75rem;
+    margin-top: 0.3rem;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 1rem;
+    transition: border-color 0.2s;
+}
+
+.cultural-form input:focus,
+.cultural-form select:focus,
+.cultural-form textarea:focus {
+    outline: none;
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 0 3px rgba(30, 70, 32, 0.1);
+}
+
+.radio-group {
+    margin-top: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.radio-group label {
+    font-weight: normal;
+    margin-top: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.submit-btn {
+    display: block;
+    width: 100%;
+    background-color: var(--secondary-color);
+    color: var(--white);
+    border: none;
+    padding: 1rem;
+    font-family: var(--font-heading);
+    font-weight: bold;
+    font-size: 1.1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: var(--shadow-subtle);
+    transition: background-color 0.2s;
+}
+
+.submit-btn:hover {
+    background-color: #132e15;
+}
+
+/* ==========================================================================
+   5. Isolated Resource Attributions Layout
+   ========================================================================== */
+.attributions-container {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+    text-align: left;
+}
+
+.attributions-container h2 {
+    font-family: var(--font-heading);
+    color: var(--primary-color);
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    text-align: left;
+}
+
+.attributions-container p {
+    font-size: 1.05rem;
+    color: var(--text-color);
+    margin-bottom: 2rem;
+}
+
+.attribution-group {
+    background-color: var(--white, #ffffff);
+    border: 1px solid #e2d9cf;
+    border-radius: 6px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: var(--shadow-subtle);
+}
+
+.attribution-group h3 {
+    font-family: var(--font-heading);
+    color: var(--secondary-color);
+    font-size: 1.3rem;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #f0eae4;
+    padding-bottom: 0.5rem;
+}
+
+.attribution-group ul {
+    list-style-type: square;
+    padding-left: 1.25rem;
+    margin: 0;
+}
+
+.attribution-group li {
+    margin-bottom: 0.75rem;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.attribution-group li:last-child {
+    margin-bottom: 0;
+}
+
+.attribution-group strong {
+    color: var(--text-color);
+}
