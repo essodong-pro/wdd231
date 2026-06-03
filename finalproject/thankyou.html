@@ -1,59 +1,66 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thank You for Your Interest | Sika Togo</title>
-
+    <meta name="description"
+        content="Thank you for your interest in Sika Togo. Your cultural inquiry has been received, and our team will be in touch shortly.">
     <meta name="author" content="Essodong N'GNAMA">
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 
-    <!-- Separate Style Sheets -->
+    <meta property="og:title" content="Thank You | Sika Togo">
+    <meta property="og:description"
+        content="Thank you for your interest in Sika Togo. Your cultural inquiry has been received.">
+    <meta property="og:image" content="https://essodong-pro.github.io/wdd231/finalproject/images/logo.webp">
+    <meta property="og:url" content="https://essodong-pro.github.io/wdd231/finalproject/thankyou.html">
+    <meta property="og:type" content="website">
+
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/components.css">
 
-    <!-- JavaScript Scripts -->
-    <script type="module" src="scripts/main.js"></script>
+    <script type="module" src="scripts/main.js" defer></script>
 </head>
 
 <body>
 
-    <!-- Site Header -->
     <header>
-        <div class="logo-area">
-            <img src="images/logo.webp" alt="Togo Art and Culture Logo" width="60" height="60" class="logo">
-            <h1>Sika Togo</h1>
+        <div class="header-container">
+            <div class="logo-area">
+                <img src="images/logo.webp" alt="Togo Art and Culture Logo" width="60" height="60" class="logo">
+                <span class="logo-title">Sika Togo</span>
+            </div>
+            <button id="menu-button" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span class="hamburger-icon"></span>
+            </button>
+            <nav id="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="gallery.html">Gallery &amp; Art</a></li>
+                    <li><a href="traditions.html">Traditions &amp; Contact</a></li>
+                </ul>
+            </nav>
         </div>
-        <nav id="main-nav">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="gallery.html">Gallery & Art</a></li>
-                <li><a href="traditions.html">Traditions & Contact</a></li>
-            </ul>
-        </nav>
     </header>
 
-    <!-- Main Content -->
     <main>
-        <section class="thankyou-message" style="text-align: center; padding: 3rem 1rem;">
-            <h2>Woezon! Thank you very much!</h2>
+        <section class="thankyou-message">
+            <h1>Woezon! Thank you very much!</h1>
             <p>Your cultural connection request has been successfully received.</p>
-            <p style="margin-bottom: 2rem;">We treat your information with the utmost care to connect you with our local
-                partners in Togo.</p>
-
-            <a href="index.html" class="cta-button"
-                style="text-decoration: none; padding: 0.8rem 1.5rem; border-radius: 5px;">Return to Home</a>
+            <p>We treat your information with the utmost care to connect you with our local partners in Togo.</p>
+            <a href="index.html" class="cta-button">Return to Home</a>
         </section>
     </main>
 
-    <!-- Footer -->
     <footer>
-        <p>&copy; <span id="current-year"></span> | WDD231 Final Project | Essodong N'GNAMA</p>
-        <p>Last Modified: <span id="last-modified"></span></p>
-        <div class="footer-links">
-            <a href="attributions.html">Resource Attributions</a> |
-            <a href="https://youtube.com" target="_blank" rel="noopener">Project Video Demonstration</a>
+        <div class="footer-container">
+            <p>&copy; <span id="current-year"></span> | WDD231 Final Project | Essodong N'GNAMA</p>
+            <p>Last Modified: <span id="last-modified"></span></p>
+            <div class="footer-links">
+                <a href="attributions.html">Resource Attributions</a> |
+                <a href="https://youtube.com" target="_blank" rel="noopener">Project Video Demonstration</a>
+            </div>
         </div>
     </footer>
 

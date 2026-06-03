@@ -1,35 +1,3 @@
-:root {
-    /* Brand Colors */
-    --primary-color: #A62424;
-    --secondary-color: #1E4620;
-    --accent-color: #D98E04;
-
-    /* UI & Neutral Colors */
-    --text-color: #222222;
-    --card-desc: #444444;
-    /* Standardized for consistency */
-    --bg-color: #FAF8F5;
-    --white: #FFFFFF;
-    --gray-light: #EDEDED;
-    --gray-dark: #555555;
-
-    /* Footer & Overlays */
-    --footer-bg: #1A1A1A;
-    --footer-text: #CCCCCC;
-    --highlight-bg: #F0EAE1;
-
-    --cta-hover: #BE7B03;
-    --submit-hover: #132E15;
-    --dark-text: #111111;
-
-    /* Typography */
-    --font-heading: 'Playfair Display', 'Helvetica Neue', Arial, sans-serif;
-    --font-body: 'Roboto', Georgia, serif;
-
-    --transition-smooth: cubic-bezier(0.4, 0, 0.2, 1);
-    --shadow-subtle: 0 4px 6px rgba(0, 0, 0, 0.05);
-}
-
 .gallery-intro {
     text-align: center;
     padding: 3rem 1.5rem 1.5rem 1.5rem;
