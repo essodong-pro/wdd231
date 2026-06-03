@@ -6,39 +6,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Traditions & Connection | Sika Togo</title>
 
-    <!-- SEO Metadata and Attribution -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,300;0,400;0,700;1,300&display=swap"
+        rel="stylesheet">
+
     <meta name="description"
         content="Discover major Togolese traditions with Essodong N'GNAMA. Join our community or contact local artisans via our online form.">
     <meta name="author" content="Essodong N'GNAMA">
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 
-    <!-- Social Media Optimization (Open Graph) -->
     <meta property="og:title" content="Traditions & Cultural Connection | Sika Togo">
     <meta property="og:type" content="website">
     <meta property="og:description"
         content="Explore the transmission of knowledge in Togo and contact us to engage with creators of authentic art.">
-    <meta property="og:image" content="images/ewe-kente.webp">
-    <meta property="og:url" content="https://your-username.github.io/wdd231/finalproject/traditions.html">
+    <meta property="og:image" content="https://essodong-pro.github.io/wdd231/finalproject/images/ewe-kente.webp">
+    <meta property="og:url" content="https://essodong-pro.github.io/wdd231/finalproject/traditions.html">
 
-    <!-- Separate Style Sheets -->
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/components.css">
 
-    <!-- JavaScript Scripts  -->
     <script type="module" src="scripts/main.js"></script>
     <script type="module" src="scripts/form-handler.js"></script>
 </head>
 
 <body>
 
-    <!-- Site Header -->
     <header>
         <div class="logo-area">
             <img src="images/logo.webp" alt="Togo Art and Culture Logo" width="60" height="60" class="logo">
-            <h1>Sika Togo</h1>
+            <p class="logo-title">Sika Togo</p>
         </div>
 
-        <!-- Responsive Navigation with Hamburger Button -->
         <button id="menu-button" aria-label="Open navigation menu" aria-expanded="false">
             <span class="hamburger-icon"></span>
         </button>
@@ -51,17 +51,15 @@
         </nav>
     </header>
 
-    <!-- Main Content -->
     <main>
         <section class="traditions-intro">
-            <h2>Preservation & Transmission</h2>
+            <h1>Preservation & Transmission</h1>
             <p>In Togo, culture is not frozen in the past; it thrives through spoken word, shared gestures, and
                 interactive dialogue. Whether you are a researcher, an art enthusiast, or a member of the diaspora
                 seeking to reconnect with your roots, this form connects you directly with our network of local
                 artisans, historians, and storytellers.</p>
         </section>
 
-        <!-- Form Section Meeting Academic Standards -->
         <section class="form-section">
             <h3>Cultural Inquiry Form</h3>
             <p>Fill out this form to arrange a consultation or to obtain targeted information about a specific craft.
@@ -69,7 +67,6 @@
 
             <form action="thankyou.html" method="get" class="cultural-form">
 
-                <!-- Personal Information Group -->
                 <fieldset>
                     <legend>Your Information</legend>
 
@@ -83,7 +80,6 @@
                     <input type="email" id="email" name="email" required placeholder="name@example.com">
                 </fieldset>
 
-                <!-- Cultural Interests Group -->
                 <fieldset>
                     <legend>Your Area of Interest</legend>
 
@@ -96,14 +92,13 @@
                     </select>
 
                     <label for="user-type">You are a:</label>
-                    <div class="radio-group">
+                    <div class="radio-group" id="user-type">
                         <label><input type="radio" name="usertype" value="visitor" checked> Enthusiast / Visitor</label>
                         <label><input type="radio" name="usertype" value="artist"> Artist / Creator</label>
                         <label><input type="radio" name="usertype" value="researcher"> Researcher / Student</label>
                     </div>
                 </fieldset>
 
-                <!-- Free Message Area -->
                 <fieldset>
                     <legend>Your Message</legend>
                     <label for="message">How can we assist you in your cultural discovery?</label>
@@ -111,13 +106,11 @@
                         placeholder="Describe your project or questions here..."></textarea>
                 </fieldset>
 
-                <!-- Submit Button -->
                 <button type="submit" class="submit-btn">Submit My Request</button>
             </form>
         </section>
     </main>
 
-    <!-- Footer -->
     <footer>
         <p>&copy; <span id="current-year"></span> | WDD231 Final Project | Essodong N'GNAMA</p>
         <p>Last Modified: <span id="last-modified"></span></p>

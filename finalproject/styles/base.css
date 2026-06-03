@@ -7,6 +7,9 @@
     --white: #FFFFFF;
     --gray-light: #EDEDED;
     --gray-dark: #555555;
+    --footer-bg: #1A1A1A;
+    --footer-text: #CCCCCC;
+    --highlight-bg: #F0EAE1;
 
     --font-heading: 'Playfair Display', 'Helvetica Neue', Arial, sans-serif;
     --font-body: 'Roboto', Georgia, serif;
@@ -50,6 +53,13 @@ header {
     display: flex;
     align-items: center;
     gap: 0.8rem;
+}
+
+.logo-area .logo-title {
+    font-family: var(--font-heading);
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    font-weight: 700;
 }
 
 .logo {
@@ -148,7 +158,7 @@ header {
 
 .hero-banner {
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../images/ewe-kente.webp') center/cover no-repeat;
-    background-color: #1a1a1a;
+    background-color: var(--footer-bg);
     color: var(--white);
     padding: 4rem 1.5rem;
     text-align: center;
@@ -210,7 +220,7 @@ header {
 
 .highlight-section {
     padding: 2rem 1.5rem;
-    background-color: #f0eae1;
+    background-color: var(--highlight-bg);
 }
 
 .highlight-section h3 {
@@ -234,8 +244,8 @@ header {
 }
 
 footer {
-    background-color: #1a1a1a;
-    color: #cccccc;
+    background-color: var(--footer-bg);
+    color: var(--footer-text);
     text-align: center;
     padding: 2rem 1rem;
     font-family: var(--font-heading);
